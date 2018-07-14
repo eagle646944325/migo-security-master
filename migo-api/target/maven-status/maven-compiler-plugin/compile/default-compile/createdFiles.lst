@@ -1,0 +1,15 @@
+com/migo/dao/TokenDao.class
+com/migo/interceptor/AuthorizationInterceptor.class
+com/migo/annotation/IgnoreAuth.class
+com/migo/api/ApiLoginController.class
+com/migo/entity/TokenEntity.class
+com/migo/service/impl/TokenServiceImpl.class
+com/migo/dao/UserDao.class
+com/migo/service/UserService.class
+com/migo/annotation/LoginUser.class
+com/migo/service/impl/UserServiceImpl.class
+com/migo/service/TokenService.class
+com/migo/resolver/LoginUserHandlerMethodArgumentResolver.class
+com/migo/api/ApiRegisterController.class
+com/migo/api/ApiTestController.class
+com/migo/entity/UserEntity.class

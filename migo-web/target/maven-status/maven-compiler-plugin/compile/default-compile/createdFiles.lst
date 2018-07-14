@@ -1,0 +1,9 @@
+com/migo/aop/SysLogAspect.class
+com/migo/entity/SysOssEntity.class
+com/migo/controller/SysConfigController.class
+com/migo/dao/SysOssDao.class
+com/migo/controller/SysOssController.class
+com/migo/controller/SysPageController.class
+com/migo/service/impl/SysOssServiceImpl.class
+com/migo/service/SysOssService.class
+com/migo/controller/SysLogController.class
