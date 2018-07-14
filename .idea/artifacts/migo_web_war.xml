@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="migo-web:war">
+    <output-path>$PROJECT_DIR$/migo-web/target</output-path>
+    <root id="archive" name="migo-web-1.0.2.war">
+      <element id="artifact" artifact-name="migo-web:war exploded" />
+    </root>
+  </artifact>
+</component>

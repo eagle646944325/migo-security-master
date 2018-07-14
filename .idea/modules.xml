@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/migo-api/migo-api.iml" filepath="$PROJECT_DIR$/migo-api/migo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/migo-common/migo-common.iml" filepath="$PROJECT_DIR$/migo-common/migo-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/migo-gen/migo-gen.iml" filepath="$PROJECT_DIR$/migo-gen/migo-gen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/migo-schedule/migo-schedule.iml" filepath="$PROJECT_DIR$/migo-schedule/migo-schedule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/migo-security.iml" filepath="$PROJECT_DIR$/migo-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/migo-shiro/migo-shiro.iml" filepath="$PROJECT_DIR$/migo-shiro/migo-shiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/migo-web/migo-web.iml" filepath="$PROJECT_DIR$/migo-web/migo-web.iml" />
+    </modules>
+  </component>
+</project>
