@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -46,19 +47,45 @@ public class ApiLoginController {
     /**
      * 登录
      */
+//    @IgnoreAuth
+//    @PostMapping("login")
+//    public R login(String mobile, String password){
+//        Assert.isBlank(mobile, "手机号不能为空");
+//        Assert.isBlank(password, "密码不能为空");
+//
+//        //用户登录
+//        long userId = userService.login(mobile, password);
+//
+//        //生成token
+//        Map<String, Object> map = tokenService.createToken(userId);
+//
+//        return R.ok(map);
+//    }
+
+
+
+    /**
+     * 登录
+     */
     @IgnoreAuth
-    @PostMapping("login")
+    @PostMapping("loginOk")
     public R login(String mobile, String password){
         Assert.isBlank(mobile, "手机号不能为空");
         Assert.isBlank(password, "密码不能为空");
-
-        //用户登录
-        long userId = userService.login(mobile, password);
-
-        //生成token
-        Map<String, Object> map = tokenService.createToken(userId);
-
+        Map<String, Object> map = new HashMap<>();
+        map.put("token", "2132132132");
         return R.ok(map);
     }
 
+    /**
+     * 登录
+     */
+    @IgnoreAuth
+    @PostMapping("loginError")
+    public R loginError(String mobile, String password){
+        Assert.isBlank(mobile, "手机号不能为空");
+        Assert.isBlank(password, "密码不能为空");
+
+        return R.error();
+    }
 }
