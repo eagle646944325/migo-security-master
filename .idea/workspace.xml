@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="021cf476-5893-4f59-bde4-c8bcc1ee3c71" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/dao/ProductDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity/ProductEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/ProductService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/impl/ProductServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/resources/com/migo/dao/ProductDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-web/src/main/java/com/migo/controller/ProductController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/product.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-web/target/migo-web-1.0.2.war" afterPath="$PROJECT_DIR$/migo-web/target/migo-web-1.0.2.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-web/target/migo-web-1.0.2/WEB-INF/lib/migo-api-1.0.2.jar" afterPath="$PROJECT_DIR$/migo-web/target/migo-web-1.0.2/WEB-INF/lib/migo-api-1.0.2.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-web/target/migo-web-1.0.2/WEB-INF/lib/migo-common-1.0.2.jar" afterPath="$PROJECT_DIR$/migo-web/target/migo-web-1.0.2/WEB-INF/lib/migo-common-1.0.2.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-web/target/migo-web-1.0.2/WEB-INF/lib/migo-gen-1.0.2.jar" afterPath="$PROJECT_DIR$/migo-web/target/migo-web-1.0.2/WEB-INF/lib/migo-gen-1.0.2.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-web/target/migo-web-1.0.2/WEB-INF/lib/migo-schedule-1.0.2.jar" afterPath="$PROJECT_DIR$/migo-web/target/migo-web-1.0.2/WEB-INF/lib/migo-schedule-1.0.2.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-web/target/migo-web-1.0.2/WEB-INF/lib/migo-shiro-1.0.2.jar" afterPath="$PROJECT_DIR$/migo-web/target/migo-web-1.0.2/WEB-INF/lib/migo-shiro-1.0.2.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-api/migo-api.iml" afterPath="$PROJECT_DIR$/migo-api/migo-api.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-common/migo-common.iml" afterPath="$PROJECT_DIR$/migo-common/migo-common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-gen/migo-gen.iml" afterPath="$PROJECT_DIR$/migo-gen/migo-gen.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-schedule/migo-schedule.iml" afterPath="$PROJECT_DIR$/migo-schedule/migo-schedule.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-shiro/migo-shiro.iml" afterPath="$PROJECT_DIR$/migo-shiro/migo-shiro.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-web/migo-web.iml" afterPath="$PROJECT_DIR$/migo-web/migo-web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="migo-security.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,8 +86,8 @@
       <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/migo-web/src/main/java/com/migo/controller/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -715,16 +697,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531550250614</updated>
-      <workItem from="1531550253450" duration="2059000" />
+      <workItem from="1531550253450" duration="2134000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2059000" />
+    <option name="totallyTimeSpent" value="2134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="980" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -736,7 +718,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39907193" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39907193" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -923,8 +905,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/migo-web/src/main/java/com/migo/controller/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="435">
+          <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
           <folding />
         </state>
       </provider>
