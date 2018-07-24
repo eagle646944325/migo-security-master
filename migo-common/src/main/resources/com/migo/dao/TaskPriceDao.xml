@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.migo.dao.TaskPriceDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.migo.entity.TaskPriceEntity" id="taskPriceMap">
+        <result property="priceId" column="price_id"/>
+        <result property="goodsPrice" column="goods_price"/>
+        <result property="express" column="express"/>
+        <result property="model" column="model"/>
+        <result property="number" column="number"/>
+        <result property="taskNumber" column="task_number"/>
+        <result property="taskId" column="task_id"/>
+    </resultMap>
+
+	<select id="queryObject" resultType="com.migo.entity.TaskPriceEntity">
+		select * from tb_task_Price where price_id = #{value}
+	</select>
+
+	<select id="queryList" resultType="com.migo.entity.TaskPriceEntity">
+		select * from tb_task_Price
+        <choose>
+            <when test="sidx != null and sidx.trim() != ''">
+                order by ${sidx} ${order}
+            </when>
+			<otherwise>
+                order by price_id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="queryTotal" resultType="int">
+		select count(*) from tb_task_Price 
+	</select>
+	 
+	<insert id="save" parameterType="com.migo.entity.TaskPriceEntity" useGeneratedKeys="true" keyProperty="priceId">
+		insert into tb_task_Price
+		(
+			`goods_price`, 
+			`express`, 
+			`model`, 
+			`number`, 
+			`task_number`, 
+			`task_id`
+		)
+		values
+		(
+			#{goodsPrice}, 
+			#{express}, 
+			#{model}, 
+			#{number}, 
+			#{taskNumber}, 
+			#{taskId}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.migo.entity.TaskPriceEntity">
+		update tb_task_Price 
+		<set>
+			<if test="goodsPrice != null">`goods_price` = #{goodsPrice}, </if>
+			<if test="express != null">`express` = #{express}, </if>
+			<if test="model != null">`model` = #{model}, </if>
+			<if test="number != null">`number` = #{number}, </if>
+			<if test="taskNumber != null">`task_number` = #{taskNumber}, </if>
+			<if test="taskId != null">`task_id` = #{taskId}</if>
+		</set>
+		where price_id = #{priceId}
+	</update>
+	
+	<delete id="delete">
+		delete from tb_task_Price where price_id = #{value}
+	</delete>
+	
+	<delete id="deleteBatch">
+		delete from tb_task_Price where price_id in 
+		<foreach item="priceId" collection="array" open="(" separator="," close=")">
+			#{priceId}
+		</foreach>
+	</delete>
+
+</mapper>
