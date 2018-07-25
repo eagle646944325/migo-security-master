@@ -47,13 +47,14 @@ public class AliyunCloudStorageService extends CloudStorageService {
     }
 
     @Override
-    public String upload(byte[] data, String path) {
-        return upload(new ByteArrayInputStream(data), path);
+    public String upload(byte[] data, String path,String suffix) {
+        return upload(new ByteArrayInputStream(data), path, suffix);
     }
 
     @Override
-    public String upload(InputStream inputStream, String path) {
+    public String upload(InputStream inputStream, String path,String suffix) {
         try {
+            path=path+suffix;
             client.putObject(config.getAliyunBucketName(), path, inputStream);
         } catch (Exception e){
             throw new RRException("上传文件失败，请检查配置信息", e);
@@ -63,12 +64,12 @@ public class AliyunCloudStorageService extends CloudStorageService {
     }
 
     @Override
-    public String upload(byte[] data) {
-        return upload(data, getPath(config.getAliyunPrefix()));
+    public String upload(byte[] data,String suffix) {
+        return upload(data, getPath(config.getAliyunPrefix()),suffix);
     }
 
     @Override
     public String upload(InputStream inputStream) {
-        return upload(inputStream, getPath(config.getAliyunPrefix()));
+        return upload(inputStream, getPath(config.getAliyunPrefix()),null);
     }
 }

@@ -53,7 +53,7 @@ public class QiniuCloudStorageService extends CloudStorageService {
     }
 
     @Override
-    public String upload(byte[] data, String path) {
+    public String upload(byte[] data, String path,String suffix) {
         try {
             Response res = uploadManager.put(data, path, token);
             if (!res.isOK()) {
@@ -67,7 +67,7 @@ public class QiniuCloudStorageService extends CloudStorageService {
     }
 
     @Override
-    public String upload(InputStream inputStream, String path) {
+    public String upload(InputStream inputStream, String path,String suffix) {
         try {
             byte[] data = IOUtils.toByteArray(inputStream);
             return this.upload(data, path);
@@ -77,12 +77,12 @@ public class QiniuCloudStorageService extends CloudStorageService {
     }
 
     @Override
-    public String upload(byte[] data) {
-        return upload(data, getPath(config.getQiniuPrefix()));
+    public String upload(byte[] data,String suffix) {
+        return upload(data, getPath(config.getQiniuPrefix()), suffix);
     }
 
     @Override
     public String upload(InputStream inputStream) {
-        return upload(inputStream, getPath(config.getQiniuPrefix()));
+        return upload(inputStream, getPath(config.getQiniuPrefix()),null);
     }
 }

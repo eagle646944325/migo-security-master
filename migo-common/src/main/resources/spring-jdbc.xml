@@ -31,7 +31,8 @@
 
 	<tx:annotation-driven />
 	<context:property-placeholder location="classpath:db.properties" />
-	
+	<bean id="springContextUtils" class="com.migo.utils.SpringContextUtils" />
+
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
 		init-method="init" destroy-method="close">
 		<property name="url" value="${jdbc.url}"/>
@@ -88,4 +89,6 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.migo.dao" />
 	</bean>
+
+
 </beans>

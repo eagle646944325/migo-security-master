@@ -19,8 +19,7 @@ package com.migo.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.migo.entity.SysOssEntity;
-import com.migo.oss.CloudStorageConfig;
-import com.migo.oss.OSSFactory;
+import com.migo.oss.*;
 import com.migo.service.SysConfigService;
 import com.migo.service.SysOssService;
 import com.migo.utils.*;
@@ -122,9 +121,10 @@ public class SysOssController {
         if (file.isEmpty()) {
             throw new RRException("上传文件不能为空");
         }
-
+        String filename = file.getOriginalFilename();
+        String prefix=filename.substring(filename.lastIndexOf("."));
         //上传文件
-        String url = OSSFactory.build().upload(file.getBytes());
+        String url = build().upload(file.getBytes(),prefix);
 
         //保存文件信息
         SysOssEntity ossEntity = new SysOssEntity();
@@ -135,7 +135,20 @@ public class SysOssController {
         return R.ok().put("url", url);
     }
 
+    public CloudStorageService build(){
+        //获取云存储配置信息
+        CloudStorageConfig config = sysConfigService.getConfigObject(ConfigConstant.CLOUD_STORAGE_CONFIG_KEY, CloudStorageConfig.class);
 
+        if(config.getType() == Constant.CloudService.QINIU.getValue()){
+            return new QiniuCloudStorageService(config);
+        }else if(config.getType() == Constant.CloudService.ALIYUN.getValue()){
+            return new AliyunCloudStorageService(config);
+        }else if(config.getType() == Constant.CloudService.QCLOUD.getValue()){
+            return new QcloudCloudStorageService(config);
+        }
+
+        return null;
+    }
     /**
      * 删除
      */

@@ -59,14 +59,14 @@ public abstract class CloudStorageService {
      * @param path    文件路径，包含文件名
      * @return        返回http地址
      */
-    public abstract String upload(byte[] data, String path);
+    public abstract String upload(byte[] data, String path,String suffix);
 
     /**
      * 文件上传
      * @param data    文件字节数组
      * @return        返回http地址
      */
-    public abstract String upload(byte[] data);
+    public abstract String upload(byte[] data,String suffix);
 
     /**
      * 文件上传
@@ -74,7 +74,7 @@ public abstract class CloudStorageService {
      * @param path          文件路径，包含文件名
      * @return              返回http地址
      */
-    public abstract String upload(InputStream inputStream, String path);
+    public abstract String upload(InputStream inputStream, String path,String suffix);
 
     /**
      * 文件上传

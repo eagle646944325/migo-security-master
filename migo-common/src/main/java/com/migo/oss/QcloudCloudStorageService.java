@@ -59,7 +59,7 @@ public class QcloudCloudStorageService extends CloudStorageService {
     }
 
     @Override
-    public String upload(byte[] data, String path) {
+    public String upload(byte[] data, String path,String suffix) {
         //腾讯云必需要以"/"开头
         if(!path.startsWith("/")) {
             path = "/" + path;
@@ -78,7 +78,7 @@ public class QcloudCloudStorageService extends CloudStorageService {
     }
 
     @Override
-    public String upload(InputStream inputStream, String path) {
+    public String upload(InputStream inputStream, String path,String suffix) {
         try {
             byte[] data = IOUtils.toByteArray(inputStream);
             return this.upload(data, path);
@@ -88,13 +88,13 @@ public class QcloudCloudStorageService extends CloudStorageService {
     }
 
     @Override
-    public String upload(byte[] data) {
-        return upload(data, getPath(config.getQcloudPrefix()));
+    public String upload(byte[] data,String suffix) {
+        return upload(data, getPath(config.getQcloudPrefix()),null);
     }
 
     @Override
     public String upload(InputStream inputStream) {
-        return upload(inputStream, getPath(config.getQcloudPrefix()));
+        return upload(inputStream, getPath(config.getQcloudPrefix()),null);
     }
 
 }

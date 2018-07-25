@@ -30,7 +30,7 @@ public class OSSFactory {
     private static SysConfigService sysConfigService;
 
     static {
-        OSSFactory.sysConfigService = (SysConfigService) SpringContextUtils.getBean("sysConfigService");
+        OSSFactory.sysConfigService = (SysConfigService) SpringContextUtils.getContext().getBean("sysConfigService");
     }
 
     public static CloudStorageService build(){
