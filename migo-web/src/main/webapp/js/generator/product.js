@@ -38,6 +38,32 @@ $(function () {
         	$("#jqGrid").closest(".ui-jqgrid-bdiv").css({ "overflow-x" : "hidden" }); 
         }
     });
+
+    new AjaxUpload('#upload', {
+        action: '../sys/oss/upload',
+        name: 'file',
+        autoSubmit:true,
+        responseType:"json",
+        onSubmit:function(file, extension){
+
+            if (!(extension && /^(jpg|jpeg|png|gif)$/.test(extension.toLowerCase()))){
+                alert('只支持jpg、png、gif格式的图片！');
+                return false;
+            }
+        },
+        onComplete : function(file, r){
+            if(r.code == 0){
+                alert(r.url);
+                vm.product.productImage1=r.url;
+                product.productImage1 = r.url;
+               // vm.reload();
+            }else{
+                alert(r.msg);
+            }
+        }
+    });
+
+
 });
 
 var vm = new Vue({
