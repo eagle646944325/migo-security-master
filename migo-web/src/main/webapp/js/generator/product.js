@@ -3,7 +3,7 @@ $(function () {
         url: '../product/list',
         datatype: "json",
         colModel: [			
-			{ label: 'id', name: 'id', index: 'id', width: 50, key: true },
+		/*	{ label: 'id', name: 'id', index: 'id', width: 50, key: true },*/
 			{ label: '商品名称', name: 'productName', index: 'product_name', width: 80 }, 			
 			{ label: '联系人', name: 'contacts', index: 'contacts', width: 80 }, 			
 			{ label: '连接地址', name: 'productUrl', index: 'product_url', width: 80 }, 			
@@ -53,16 +53,36 @@ $(function () {
         },
         onComplete : function(file, r){
             if(r.code == 0){
-                alert(r.url);
-                vm.product.productImage1=r.url;
-                product.productImage1 = r.url;
+                $("#productImage1").val(r.url);
+                $("#myproductImage1").attr("src",r.url);
                // vm.reload();
             }else{
                 alert(r.msg);
             }
         }
     });
+    new AjaxUpload('#upload2', {
+        action: '../sys/oss/upload',
+        name: 'file',
+        autoSubmit:true,
+        responseType:"json",
+        onSubmit:function(file, extension){
 
+            if (!(extension && /^(jpg|jpeg|png|gif)$/.test(extension.toLowerCase()))){
+                alert('只支持jpg、png、gif格式的图片！');
+                return false;
+            }
+        },
+        onComplete : function(file, r){
+            if(r.code == 0){
+                $("#productImage2").val(r.url);
+                $("#myproductImage2").attr("src",r.url);
+                // vm.reload();
+            }else{
+                alert(r.msg);
+            }
+        }
+    });
 
 });
 
@@ -94,6 +114,8 @@ var vm = new Vue({
 		},
 		saveOrUpdate: function (event) {
 			var url = vm.product.id == null ? "../product/save" : "../product/update";
+            vm.product.productImage1= $("#productImage1").val();
+            vm.product.productImage2= $("#productImage2").val();
 			$.ajax({
 				type: "POST",
 			    url: url,

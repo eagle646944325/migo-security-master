@@ -1,5 +1,6 @@
 package com.migo.controller;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -66,6 +67,7 @@ public class ProductController {
 	@RequestMapping("/save")
 	@RequiresPermissions("product:save")
 	public R save(@RequestBody ProductEntity product){
+		product.setCreateData(new Date());
 		productService.save(product);
 		
 		return R.ok();
@@ -77,6 +79,7 @@ public class ProductController {
 	@RequestMapping("/update")
 	@RequiresPermissions("product:update")
 	public R update(@RequestBody ProductEntity product){
+		product.setCreateData(new Date());
 		productService.update(product);
 		
 		return R.ok();

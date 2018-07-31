@@ -47,14 +47,18 @@
 									<div class="form-group">
 			   	<div class="col-sm-2 control-label">主图</div>
 			   	<div class="col-sm-10">
-			      <input type="text" class="form-control" v-model="product.productImage1" placeholder="主图"/>
+			      <input type="hidden" class="form-control" id="productImage1" v-model="product.productImage1" placeholder="主图"/>
+					<img id="myproductImage1" :src="product.productImage1" width="107" height="98">
 					<a class="btn btn-primary" id="upload"><i class="fa fa-plus"></i>&nbsp;上传文件</a>
 			    </div>
 			</div>
 									<div class="form-group">
 			   	<div class="col-sm-2 control-label">手机图</div>
 			   	<div class="col-sm-10">
-			      <input type="text" class="form-control" v-model="product.productImage2" placeholder="手机图"/>
+			      <input type="hidden" class="form-control" id="productImage2" v-model="product.productImage2" placeholder="手机图"/>
+
+					<img id="myproductImage2" :src="product.productImage2"    width="107" height="98">
+					<a class="btn btn-primary" id="upload2"><i class="fa fa-plus"></i>&nbsp;上传文件</a>
 			    </div>
 			</div>
 									<div class="form-group">
@@ -69,12 +73,12 @@
 			      <input type="text" class="form-control" v-model="product.productType" placeholder="商品类型"/>
 			    </div>
 			</div>
-									<div class="form-group">
+			<!--<div class="form-group">
 			   	<div class="col-sm-2 control-label">创建时间</div>
 			   	<div class="col-sm-10">
 			      <input type="text" class="form-control" v-model="product.createData" placeholder="创建时间"/>
 			    </div>
-			</div>
+			</div>-->
 							<div class="form-group">
 				<div class="col-sm-2 control-label"></div>
 				<input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
