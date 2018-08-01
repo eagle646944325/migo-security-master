@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 
-
 /**
  * 任务表
  * 
@@ -12,7 +11,7 @@ import java.util.Date;
  * @email fei6751803@163.com
  * @date 2018-08-01 14:46:07
  */
-public class TaskEntity implements Serializable {
+public class TaskEntityBo implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	//任务ID

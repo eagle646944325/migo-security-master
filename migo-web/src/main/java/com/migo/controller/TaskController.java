@@ -1,8 +1,13 @@
 package com.migo.controller;
 
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.migo.entity.ProductEntity;
+import com.migo.entity.SysUserEntity;
+import com.migo.service.ProductService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,10 +32,11 @@ import com.migo.utils.R;
  */
 @RestController
 @RequestMapping("task")
-public class TaskController {
+public class TaskController   extends AbstractController{
 	@Autowired
 	private TaskService taskService;
-	
+	@Autowired
+	private ProductService productService;
 	/**
 	 * 列表
 	 */
@@ -59,15 +65,33 @@ public class TaskController {
 		
 		return R.ok().put("task", task);
 	}
-	
+	/**
+	 * 信息
+	 */
+	@RequestMapping("/productList")
+	@RequiresPermissions("task:productList")
+	public R productList(){
+		SysUserEntity sysUserEntity=getUser();
+		Map<String, Object> map=new HashMap<>();
+		map.put("createUserId",sysUserEntity.getUserId());
+		List<ProductEntity> productList = productService.queryList(map);
+
+		return R.ok().put("productList", productList);
+	}
 	/**
 	 * 保存
 	 */
 	@RequestMapping("/save")
 	@RequiresPermissions("task:save")
 	public R save(@RequestBody TaskEntity task){
+		SysUserEntity sysUserEntity=getUser();
+		task.setCreateUserId(sysUserEntity.getUserId()+"");
+		task.setCreateUserName(sysUserEntity.getUsername());
+		task.setCreateTime(new Date());
+		long productId=Long.valueOf(task.getProductId());
+		ProductEntity productEntity=productService.queryObject(productId);
+		task.setProductName(productEntity.getProductName());
 		taskService.save(task);
-		
 		return R.ok();
 	}
 	

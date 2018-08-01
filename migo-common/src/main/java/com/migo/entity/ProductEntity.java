@@ -10,7 +10,7 @@ import java.util.Date;
  * 
  * @author zhiqiu
  * @email fei6751803@163.com
- * @date 2018-07-14 15:10:58
+ * @date 2018-07-31 17:58:49
  */
 public class ProductEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -33,6 +33,10 @@ public class ProductEntity implements Serializable {
 	private String productType;
 	//创建时间
 	private Date createData;
+	//创建人
+	private String createUserId;
+	//创建名称
+	private String createUserName;
 
 	/**
 	 * 设置：商品id
@@ -141,5 +145,29 @@ public class ProductEntity implements Serializable {
 	 */
 	public Date getCreateData() {
 		return createData;
+	}
+	/**
+	 * 设置：创建人
+	 */
+	public void setCreateUserId(String createUserId) {
+		this.createUserId = createUserId;
+	}
+	/**
+	 * 获取：创建人
+	 */
+	public String getCreateUserId() {
+		return createUserId;
+	}
+	/**
+	 * 设置：创建名称
+	 */
+	public void setCreateUserName(String createUserName) {
+		this.createUserName = createUserName;
+	}
+	/**
+	 * 获取：创建名称
+	 */
+	public String getCreateUserName() {
+		return createUserName;
 	}
 }

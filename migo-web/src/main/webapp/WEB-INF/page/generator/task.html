@@ -1,61 +1,159 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>任务表</title>
-#parse("sys/header.html")
+    <title>任务表</title>
+    #parse("sys/header.html")
 </head>
 <body>
 <div id="rrapp" v-cloak>
-	<div v-show="showList">
-		<div class="grid-btn">
-			#if($shiro.hasPermission("task:save"))
-			<a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
-			#end
-			#if($shiro.hasPermission("task:update"))
-			<a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
-			#end
-			#if($shiro.hasPermission("task:delete"))
-			<a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
-			#end
-		</div>
-	    <table id="jqGrid"></table>
-	    <div id="jqGridPager"></div>
+    <div v-show="showList">
+        <div class="grid-btn">
+            #if($shiro.hasPermission("task:save"))
+            <a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+            #end
+            #if($shiro.hasPermission("task:update"))
+            <a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+            #end
+            #if($shiro.hasPermission("task:delete"))
+            <a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+            #end
+        </div>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
     </div>
-    
+
     <div v-show="!showList" class="panel panel-default">
-		<div class="panel-heading">{{title}}</div>
-		<form class="form-horizontal">
-											<div class="form-group">
-			   	<div class="col-sm-2 control-label">任务类型</div>
-			   	<div class="col-sm-10">
-			      <input type="text" class="form-control" v-model="task.taskType" placeholder="任务类型"/>
-			    </div>
-			</div>
-									<div class="form-group">
-			   	<div class="col-sm-2 control-label">创建时间</div>
-			   	<div class="col-sm-10">
-			      <input type="text" class="form-control" v-model="task.createTime" placeholder="创建时间"/>
-			    </div>
-			</div>
-									<div class="form-group">
-			   	<div class="col-sm-2 control-label">状态</div>
-			   	<div class="col-sm-10">
-			      <input type="text" class="form-control" v-model="task.status" placeholder="状态"/>
-			    </div>
-			</div>
-									<div class="form-group">
-			   	<div class="col-sm-2 control-label">快递类型</div>
-			   	<div class="col-sm-10">
-			      <input type="text" class="form-control" v-model="task.expressType" placeholder="快递类型"/>
-			    </div>
-			</div>
-							<div class="form-group">
-				<div class="col-sm-2 control-label"></div> 
-				<input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
-				&nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
-			</div>
-		</form>
-	</div>
+        <div class="panel-heading">{{title}}</div>
+        <form style="width: 100%" class="form-horizontal" >
+            <table>
+                <tr >
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label" >任务类型</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="task.taskType" placeholder="任务类型"/>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">创建时间</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="task.createTime" placeholder="创建时间"/>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">快递类型</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="task.expressType" placeholder="快递类型"/>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">商品名称</div>
+                            <div class="col-sm-10">
+                                <select  class="form-control" v-model="task.productId">
+                                         <template v-for="item in product">
+                                                  <option v-bind:value="item.id">{{item.productName}}</option>
+                                          </template>
+                                </select>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+
+
+
+
+            <div class="panel-heading">关键字</div>
+            <table>
+                <tr >
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">流量入口</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="taskSearch.flowType" placeholder="流量入口"/>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">关键字</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="taskSearch.keyWord" placeholder="关键字"/>
+                            </div>
+                        </div>
+                    </td>
+
+
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">数量</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="taskSearch.number" placeholder="数量"/>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">备注</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="taskSearch.remark" placeholder="备注"/>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+
+                        <input type="button" class="btn btn-primary" @click="addTaskSearch" value="确定"/>
+
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table text-center">
+                <thead>
+                <tr >
+                    <th class="text-center">流量入口</th>
+                    <th class="text-center">关键字</th>
+                    <th class="text-center">数量</th>
+                    <th class="text-center">备注</th>
+                    <th class="text-center">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="item in taskSearchList">
+                    <td>{{ item.flowType }}</td>
+                    <td>{{ item.keyWord }}</td>
+                    <td>{{ item.number }}</td>
+                    <td>{{ item.remark }}</td>
+                    <td><button @click="deletePerson($index)">删除</button></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+
+            <div class="form-group">
+                <div class="col-sm-2 control-label"></div>
+                <input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+                &nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+            </div>
+        </form>
+    </div>
+
+
+
+
 </div>
 
 <script src="${rc.contextPath}/js/generator/task.js?_${date.systemTime}"></script>

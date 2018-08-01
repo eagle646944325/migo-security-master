@@ -10,6 +10,10 @@
         <result property="createTime" column="create_time"/>
         <result property="status" column="status"/>
         <result property="expressType" column="express_type"/>
+        <result property="productId" column="product_id"/>
+        <result property="productName" column="product_name"/>
+        <result property="createUserId" column="create_user_id"/>
+        <result property="createUserName" column="create_user_name"/>
     </resultMap>
 
 	<select id="queryObject" resultType="com.migo.entity.TaskEntity">
@@ -41,14 +45,22 @@
 			`task_type`, 
 			`create_time`, 
 			`status`, 
-			`express_type`
+			`express_type`, 
+			`product_id`, 
+			`product_name`, 
+			`create_user_id`, 
+			`create_user_name`
 		)
 		values
 		(
 			#{taskType}, 
 			#{createTime}, 
 			#{status}, 
-			#{expressType}
+			#{expressType}, 
+			#{productId}, 
+			#{productName}, 
+			#{createUserId}, 
+			#{createUserName}
 		)
 	</insert>
 	 
@@ -58,7 +70,11 @@
 			<if test="taskType != null">`task_type` = #{taskType}, </if>
 			<if test="createTime != null">`create_time` = #{createTime}, </if>
 			<if test="status != null">`status` = #{status}, </if>
-			<if test="expressType != null">`express_type` = #{expressType}</if>
+			<if test="expressType != null">`express_type` = #{expressType}, </if>
+			<if test="productId != null">`product_id` = #{productId}, </if>
+			<if test="productName != null">`product_name` = #{productName}, </if>
+			<if test="createUserId != null">`create_user_id` = #{createUserId}, </if>
+			<if test="createUserName != null">`create_user_name` = #{createUserName}</if>
 		</set>
 		where task_id = #{taskId}
 	</update>

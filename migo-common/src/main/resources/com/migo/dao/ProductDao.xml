@@ -14,6 +14,8 @@
         <result property="remark" column="remark"/>
         <result property="productType" column="product_type"/>
         <result property="createData" column="create_data"/>
+        <result property="createUserId" column="create_user_id"/>
+        <result property="createUserName" column="create_user_name"/>
     </resultMap>
 
 	<select id="queryObject" resultType="com.migo.entity.ProductEntity">
@@ -21,7 +23,7 @@
 	</select>
 
 	<select id="queryList" resultType="com.migo.entity.ProductEntity">
-		select * from tb_product
+		select * from tb_product where create_user_id = #{createUserId}
         <choose>
             <when test="sidx != null and sidx.trim() != ''">
                 order by ${sidx} ${order}
@@ -36,7 +38,7 @@
 	</select>
 	
  	<select id="queryTotal" resultType="int">
-		select count(*) from tb_product 
+		select count(*) from tb_product where create_user_id = #{createUserId}
 	</select>
 	 
 	<insert id="save" parameterType="com.migo.entity.ProductEntity" useGeneratedKeys="true" keyProperty="id">
@@ -49,7 +51,9 @@
 			`product_image2`, 
 			`remark`, 
 			`product_type`, 
-			`create_data`
+			`create_data`, 
+			`create_user_id`, 
+			`create_user_name`
 		)
 		values
 		(
@@ -60,7 +64,9 @@
 			#{productImage2}, 
 			#{remark}, 
 			#{productType}, 
-			#{createData}
+			#{createData}, 
+			#{createUserId}, 
+			#{createUserName}
 		)
 	</insert>
 	 
@@ -74,7 +80,9 @@
 			<if test="productImage2 != null">`product_image2` = #{productImage2}, </if>
 			<if test="remark != null">`remark` = #{remark}, </if>
 			<if test="productType != null">`product_type` = #{productType}, </if>
-			<if test="createData != null">`create_data` = #{createData}</if>
+			<if test="createData != null">`create_data` = #{createData}, </if>
+			<if test="createUserId != null">`create_user_id` = #{createUserId}, </if>
+			<if test="createUserName != null">`create_user_name` = #{createUserName}</if>
 		</set>
 		where id = #{id}
 	</update>

@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import com.migo.entity.SysUserEntity;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,7 +29,7 @@ import com.migo.utils.R;
  */
 @RestController
 @RequestMapping("product")
-public class ProductController {
+public class ProductController  extends AbstractController{
 	@Autowired
 	private ProductService productService;
 	
@@ -39,6 +40,8 @@ public class ProductController {
 	@RequiresPermissions("product:list")
 	public R list(@RequestParam Map<String, Object> params){
 		//查询列表数据
+		SysUserEntity sysUserEntity=getUser();
+		params.put("createUserId",sysUserEntity.getUserId());
         Query query = new Query(params);
 
 		List<ProductEntity> productList = productService.queryList(query);
@@ -48,7 +51,7 @@ public class ProductController {
 		
 		return R.ok().put("page", pageUtil);
 	}
-	
+
 	
 	/**
 	 * 信息
@@ -68,6 +71,9 @@ public class ProductController {
 	@RequiresPermissions("product:save")
 	public R save(@RequestBody ProductEntity product){
 		product.setCreateData(new Date());
+		SysUserEntity sysUserEntity=getUser();
+		product.setCreateUserId(sysUserEntity.getUserId()+"");
+		product.setCreateUserName(sysUserEntity.getUsername());
 		productService.save(product);
 		
 		return R.ok();
@@ -80,6 +86,9 @@ public class ProductController {
 	@RequiresPermissions("product:update")
 	public R update(@RequestBody ProductEntity product){
 		product.setCreateData(new Date());
+		SysUserEntity sysUserEntity=getUser();
+		product.setCreateUserId(sysUserEntity.getUserId()+"");
+		product.setCreateUserName(sysUserEntity.getUsername());
 		productService.update(product);
 		
 		return R.ok();

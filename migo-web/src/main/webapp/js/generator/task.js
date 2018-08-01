@@ -3,11 +3,15 @@ $(function () {
         url: '../task/list',
         datatype: "json",
         colModel: [			
-			{ label: 'taskId', name: 'taskId', index: 'task_id', width: 50, key: true },
+		/*	{ label: 'taskId', name: 'taskId', index: 'task_id', width: 50, key: true },*/
 			{ label: '任务类型', name: 'taskType', index: 'task_type', width: 80 }, 			
 			{ label: '创建时间', name: 'createTime', index: 'create_time', width: 80 }, 			
 			{ label: '状态', name: 'status', index: 'status', width: 80 }, 			
-			{ label: '快递类型', name: 'expressType', index: 'express_type', width: 80 }			
+			{ label: '快递类型', name: 'expressType', index: 'express_type', width: 80 }, 			
+		/*	{ label: '商品ID', name: 'productId', index: 'product_id', width: 80 }, 		*/
+			{ label: '商品名称', name: 'productName', index: 'product_name', width: 80 }, 			
+	/*		{ label: '创建人ID', name: 'createUserId', index: 'create_user_id', width: 80 },
+			{ label: '创建人名称', name: 'createUserName', index: 'create_user_name', width: 80 }		*/
         ],
 		viewrecords: true,
         height: 385,
@@ -40,8 +44,12 @@ var vm = new Vue({
 	el:'#rrapp',
 	data:{
 		showList: true,
+        showTaskSearch: true,
 		title: null,
-		task: {}
+		task: {},
+        product: {},
+        taskSearch: {},
+        taskSearchList:[]
 	},
 	methods: {
 		query: function () {
@@ -51,6 +59,7 @@ var vm = new Vue({
 			vm.showList = false;
 			vm.title = "新增";
 			vm.task = {};
+            vm.getownerProduct();
 		},
 		update: function (event) {
 			var taskId = getSelectedRow();
@@ -60,7 +69,8 @@ var vm = new Vue({
 			vm.showList = false;
             vm.title = "修改";
             
-            vm.getInfo(taskId)
+            vm.getInfo(taskId);
+            vm.getownerProduct();
 		},
 		saveOrUpdate: function (event) {
 			var url = vm.task.taskId == null ? "../task/save" : "../task/update";
@@ -71,7 +81,9 @@ var vm = new Vue({
 			    success: function(r){
 			    	if(r.code === 0){
 						alert('操作成功', function(index){
-							vm.reload();
+							//vm.reload();
+                            // this.$router.push({name: '../order/page1',params:{ id:'1'}});
+                            vm.showTaskSearch = false;
 						});
 					}else{
 						alert(r.msg);
@@ -79,7 +91,12 @@ var vm = new Vue({
 				}
 			});
 		},
-		del: function (event) {
+        addTaskSearch: function(){
+            this.taskSearchList.push(this.taskSearch);
+            // 添加完newPerson对象后，重置newPerson对象
+            this.taskSearch ={};
+        },
+        del: function (event) {
 			var taskIds = getSelectedRows();
 			if(taskIds == null){
 				return ;
@@ -107,6 +124,12 @@ var vm = new Vue({
                 vm.task = r.task;
             });
 		},
+        getownerProduct: function(){
+            $.get("../task/productList", function(r){
+                vm.product = r.productList;
+
+            });
+        },
 		reload: function (event) {
 			vm.showList = true;
 			var page = $("#jqGrid").jqGrid('getGridParam','page');
