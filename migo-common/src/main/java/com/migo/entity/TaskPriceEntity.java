@@ -30,8 +30,17 @@ public class TaskPriceEntity implements Serializable {
 	//任务ID
 	private String taskId;
 
+	public String getCommission() {
+		return commission;
+	}
+
+	public void setCommission(String commission) {
+		this.commission = commission;
+	}
+
+	private String commission;
 	/**
-	 * 设置：价格ID
+	 * 设置：价格I
 	 */
 	public void setPriceId(Long priceId) {
 		this.priceId = priceId;

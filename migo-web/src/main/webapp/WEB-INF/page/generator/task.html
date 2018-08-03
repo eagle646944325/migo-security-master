@@ -24,12 +24,12 @@
 
     <div v-show="!showList" class="panel panel-default">
         <div class="panel-heading">{{title}}</div>
-        <form style="width: 100%" class="form-horizontal" >
+        <form style="width: 100%" class="form-horizontal">
             <table>
-                <tr >
+                <tr>
                     <td>
                         <div class="form-group">
-                            <div class="col-sm-2 control-label" >任务类型</div>
+                            <div class="col-sm-2 control-label">任务类型</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="task.taskType" placeholder="任务类型"/>
                             </div>
@@ -44,7 +44,7 @@
                         </div>
                     </td>
                 </tr>
-                <tr >
+                <tr>
                     <td>
                         <div class="form-group">
                             <div class="col-sm-2 control-label">快递类型</div>
@@ -57,10 +57,10 @@
                         <div class="form-group">
                             <div class="col-sm-2 control-label">商品名称</div>
                             <div class="col-sm-10">
-                                <select  class="form-control" v-model="task.productId">
-                                         <template v-for="item in product">
-                                                  <option v-bind:value="item.id">{{item.productName}}</option>
-                                          </template>
+                                <select class="form-control" v-model="task.productId">
+                                    <template v-for="item in product">
+                                        <option v-bind:value="item.id">{{item.productName}}</option>
+                                    </template>
                                 </select>
                             </div>
                         </div>
@@ -70,16 +70,15 @@
             </table>
 
 
-
-
             <div class="panel-heading">关键字</div>
             <table>
-                <tr >
+                <tr>
                     <td>
                         <div class="form-group">
                             <div class="col-sm-2 control-label">流量入口</div>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" v-model="taskSearch.flowType" placeholder="流量入口"/>
+                                <input type="text" class="form-control" v-model="taskSearch.flowType"
+                                       placeholder="流量入口"/>
                             </div>
                         </div>
                     </td>
@@ -119,7 +118,7 @@
 
             <table class="table text-center">
                 <thead>
-                <tr >
+                <tr>
                     <th class="text-center">流量入口</th>
                     <th class="text-center">关键字</th>
                     <th class="text-center">数量</th>
@@ -133,12 +132,136 @@
                     <td>{{ item.keyWord }}</td>
                     <td>{{ item.number }}</td>
                     <td>{{ item.remark }}</td>
-                    <td><button @click="deletePerson($index)">删除</button></td>
+                    <td>
+                        <button @click="delTaskSearch($index)">删除</button>
+                    </td>
                 </tr>
                 </tbody>
             </table>
 
 
+            <div class="panel-heading">定价类型</div>
+            <table>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">商品单价</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="taskPrice.goodsPrice"
+                                       placeholder="商品单价"/>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">快递费（选填）</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="taskPrice.express"
+                                       placeholder="快递费（选填）"/>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">指定型号</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="taskPrice.model" placeholder="指定型号"/>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">拍下件数</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="taskPrice.number" placeholder="拍下件数"/>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">任务数量(1)</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="taskPrice.taskNumber"
+                                       placeholder="任务数量(1)"/>
+                            </div>
+                        </div>
+                    </td>
+
+
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">单任务佣金</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="taskPrice.commission"
+                                       placeholder="单任务佣金"/>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+
+                        <input type="button" class="btn btn-primary" @click="addTaskPrice" value="添加"/>
+
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table text-center">
+                <thead>
+                <tr>
+                    <th class="text-center">商品单价</th>
+                    <th class="text-center">快递费（选填）</th>
+                    <th class="text-center">指定型号</th>
+                    <th class="text-center">拍下件数</th>
+                    <th class="text-center">任务数量(1)</th>
+                    <th class="text-center">单任务佣金</th>
+                    <th class="text-center">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="item in taskPriceList">
+                    <td>{{ item.goodsPrice }}</td>
+                    <td>{{ item.express }}</td>
+                    <td>{{ item.model }}</td>
+                    <td>{{ item.number }}</td>
+                    <td>{{ item.taskNumber }}</td>
+                    <td>{{ item.commission }}</td>
+
+                    <td>
+                        <button @click="delTaskPrice($index)">删除</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+
+            <div class="panel-heading">发布时间</div>
+            <table>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <div class="col-sm-2 control-label">日期（剩余可发布数）</div>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" v-model="taskRelease.releaseTime"
+                                       placeholder="商品单价"/>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group">
+                            <input type="text" id="datepicker"></p>
+                        </div>
+                    </td>
+
+
+
+                </tr>
+            </table>
 
 
 
@@ -152,9 +275,16 @@
     </div>
 
 
-
-
 </div>
+
+<link rel="stylesheet" href="${rc.contextPath}/js/generator/jquery.ui.all.css?_${date.systemTime}">
+<!--<script src="${rc.contextPath}/js/generator/jquery-1.8.3.js"></script>-->
+<script src="${rc.contextPath}/js/generator/jquery.ui.core.js?_${date.systemTime}"></script>
+
+<script src="${rc.contextPath}/js/generator/jquery.ui.datepicker.js?_${date.systemTime}"></script>
+
+<script src="${rc.contextPath}/js/generator/jquery.ui.core.css?_${date.systemTime}"></script>
+<script src="${rc.contextPath}/js/generator/jquery.ui.base.css?_${date.systemTime}"></script>
 
 <script src="${rc.contextPath}/js/generator/task.js?_${date.systemTime}"></script>
 </body>
