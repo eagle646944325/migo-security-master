@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.migo.dao.OrderDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.migo.entity.OrderEntity" id="orderMap">
+        <result property="orderId" column="order_id"/>
+        <result property="orderType" column="order_type"/>
+        <result property="createTime" column="create_time"/>
+        <result property="goodsPrice" column="goods_price"/>
+        <result property="express" column="express"/>
+        <result property="model" column="model"/>
+        <result property="number" column="number"/>
+        <result property="taskNumber" column="task_number"/>
+        <result property="taskId" column="task_id"/>
+        <result property="commission" column="commission"/>
+        <result property="auditStatus" column="audit_status"/>
+        <result property="orderStatus" column="order_status"/>
+    </resultMap>
+
+	<select id="queryObject" resultType="com.migo.entity.OrderEntity">
+		select * from tb_order where order_id = #{value}
+	</select>
+
+	<select id="queryList" resultType="com.migo.entity.OrderEntity">
+		select * from tb_order
+        <choose>
+            <when test="sidx != null and sidx.trim() != ''">
+                order by ${sidx} ${order}
+            </when>
+			<otherwise>
+                order by order_id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="queryTotal" resultType="int">
+		select count(*) from tb_order 
+	</select>
+	 
+	<insert id="save" parameterType="com.migo.entity.OrderEntity" useGeneratedKeys="true" keyProperty="orderId">
+		insert into tb_order
+		(
+			`order_type`, 
+			`create_time`, 
+			`goods_price`, 
+			`express`, 
+			`model`, 
+			`number`, 
+			`task_number`, 
+			`task_id`, 
+			`commission`, 
+			`audit_status`, 
+			`order_status`
+		)
+		values
+		(
+			#{orderType}, 
+			#{createTime}, 
+			#{goodsPrice}, 
+			#{express}, 
+			#{model}, 
+			#{number}, 
+			#{taskNumber}, 
+			#{taskId}, 
+			#{commission}, 
+			#{auditStatus}, 
+			#{orderStatus}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.migo.entity.OrderEntity">
+		update tb_order 
+		<set>
+			<if test="orderType != null">`order_type` = #{orderType}, </if>
+			<if test="createTime != null">`create_time` = #{createTime}, </if>
+			<if test="goodsPrice != null">`goods_price` = #{goodsPrice}, </if>
+			<if test="express != null">`express` = #{express}, </if>
+			<if test="model != null">`model` = #{model}, </if>
+			<if test="number != null">`number` = #{number}, </if>
+			<if test="taskNumber != null">`task_number` = #{taskNumber}, </if>
+			<if test="taskId != null">`task_id` = #{taskId}, </if>
+			<if test="commission != null">`commission` = #{commission}, </if>
+			<if test="auditStatus != null">`audit_status` = #{auditStatus}, </if>
+			<if test="orderStatus != null">`order_status` = #{orderStatus}</if>
+		</set>
+		where order_id = #{orderId}
+	</update>
+	
+	<delete id="delete">
+		delete from tb_order where order_id = #{value}
+	</delete>
+	
+	<delete id="deleteBatch">
+		delete from tb_order where order_id in 
+		<foreach item="orderId" collection="array" open="(" separator="," close=")">
+			#{orderId}
+		</foreach>
+	</delete>
+
+</mapper>
