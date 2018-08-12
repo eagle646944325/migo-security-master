@@ -4,7 +4,7 @@
     <title>任务表</title>
     #parse("sys/header.html")
 </head>
-<body>
+<body style="font-size:12px;">
 <div id="rrapp" v-cloak>
     <div v-show="showList">
         <div class="grid-btn">
@@ -22,41 +22,40 @@
         <div id="jqGridPager"></div>
     </div>
 
-    <div v-show="!showList" class="panel panel-default">
+    <div v-show="!showList" class="panel panel-default" style="white-space:nowrap;">
         <div class="panel-heading">{{title}}</div>
         <form style="width: 100%" class="form-horizontal">
+            <div class="panel-heading">任务描述</div>
             <table>
                 <tr>
                     <td>
-                        <div class="form-group">
-                            <div class="col-sm-2 control-label">任务类型</div>
+                        <div class="form-group-left">
+                            <div class="col-sm-2 control-label" title="任务类型">任务类型</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="task.taskType" placeholder="任务类型"/>
                             </div>
                         </div>
                     </td>
                     <td>
-                        <div class="form-group">
-                            <div class="col-sm-2 control-label">创建时间</div>
+                        <div class="form-group-left">
+                            <div class="col-sm-2 control-label" title="创建时间">创建时间</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="task.createTime" placeholder="创建时间"/>
                             </div>
                         </div>
                     </td>
-                </tr>
-                <tr>
                     <td>
-                        <div class="form-group">
-                            <div class="col-sm-2 control-label">快递类型</div>
+                        <div class="form-group-left">
+                            <div class="col-sm-2 control-label" title="快递类型">快递类型</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="task.expressType" placeholder="快递类型"/>
                             </div>
                         </div>
                     </td>
                     <td>
-                        <div class="form-group">
-                            <div class="col-sm-2 control-label">商品名称</div>
-                            <div class="col-sm-10">
+                        <div class="form-group-left">
+                            <div class="col-sm-2 control-label" title="商品名称">商品名称</div>
+                            <div class="col-sm-10" style="padding-left: 17px;">
                                 <select class="form-control" v-model="task.productId">
                                     <template v-for="item in product">
                                         <option v-bind:value="item.id">{{item.productName}}</option>
@@ -68,14 +67,14 @@
                 </tr>
 
             </table>
-
+            <hr style="height:5px;border:none;border-top:5px ridge green;" />
 
             <div class="panel-heading">关键字</div>
             <table>
                 <tr>
                     <td>
                         <div class="form-group">
-                            <div class="col-sm-2 control-label">流量入口</div>
+                            <div class="col-sm-2 control-label" title="流量入口">流量入口</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="taskSearch.flowType"
                                        placeholder="流量入口"/>
@@ -84,7 +83,7 @@
                     </td>
                     <td>
                         <div class="form-group">
-                            <div class="col-sm-2 control-label">关键字</div>
+                            <div class="col-sm-2 control-label" title="关键字">关键字</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="taskSearch.keyWord" placeholder="关键字"/>
                             </div>
@@ -92,17 +91,17 @@
                     </td>
 
 
-                    <td>
+               <!--     <td>
                         <div class="form-group">
                             <div class="col-sm-2 control-label">数量</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="taskSearch.number" placeholder="数量"/>
                             </div>
                         </div>
-                    </td>
+                    </td>-->
                     <td>
                         <div class="form-group">
-                            <div class="col-sm-2 control-label">备注</div>
+                            <div class="col-sm-2 control-label" title="备注">备注</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="taskSearch.remark" placeholder="备注"/>
                             </div>
@@ -121,7 +120,7 @@
                 <tr>
                     <th class="text-center">流量入口</th>
                     <th class="text-center">关键字</th>
-                    <th class="text-center">数量</th>
+                    <!--<th class="text-center">数量</th>-->
                     <th class="text-center">备注</th>
                     <th class="text-center">操作</th>
                 </tr>
@@ -130,7 +129,7 @@
                 <tr v-for="item in taskSearchList">
                     <td>{{ item.flowType }}</td>
                     <td>{{ item.keyWord }}</td>
-                    <td>{{ item.number }}</td>
+                    <!--<td>{{ item.number }}</td>-->
                     <td>{{ item.remark }}</td>
                     <td>
                         <button @click="delTaskSearch($index)">删除</button>
@@ -139,13 +138,13 @@
                 </tbody>
             </table>
 
-
+            <hr style="height:5px;border:none;border-top:5px ridge green;" />
             <div class="panel-heading">定价类型</div>
             <table>
                 <tr>
                     <td>
                         <div class="form-group">
-                            <div class="col-sm-2 control-label">商品单价</div>
+                            <div class="col-sm-2 control-label" title="商品单价">商品单价</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="taskPrice.goodsPrice"
                                        placeholder="商品单价"/>
@@ -154,7 +153,7 @@
                     </td>
                     <td>
                         <div class="form-group">
-                            <div class="col-sm-2 control-label">快递费（选填）</div>
+                            <div class="col-sm-2 control-label" title="快递费（选填）">快递费（选填）</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="taskPrice.express"
                                        placeholder="快递费（选填）"/>
@@ -163,7 +162,7 @@
                     </td>
                     <td>
                         <div class="form-group">
-                            <div class="col-sm-2 control-label">指定型号</div>
+                            <div class="col-sm-2 control-label" title="指定型号">指定型号</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="taskPrice.model" placeholder="指定型号"/>
                             </div>
@@ -171,16 +170,17 @@
                     </td>
                     <td>
                         <div class="form-group">
-                            <div class="col-sm-2 control-label">拍下件数</div>
+                            <div class="col-sm-2 control-label" title="拍下件数">拍下件数</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="taskPrice.number" placeholder="拍下件数"/>
                             </div>
                         </div>
                     </td>
-
+                </tr>
+                <tr>
                     <td>
                         <div class="form-group">
-                            <div class="col-sm-2 control-label">任务数量(1)</div>
+                            <div class="col-sm-2 control-label" title="任务数量(1)">任务数量(1)</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="taskPrice.taskNumber"
                                        placeholder="任务数量(1)"/>
@@ -191,7 +191,7 @@
 
                     <td>
                         <div class="form-group">
-                            <div class="col-sm-2 control-label">单任务佣金</div>
+                            <div class="col-sm-2 control-label" title="单任务佣金">单任务佣金</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="taskPrice.commission"
                                        placeholder="单任务佣金"/>
@@ -239,12 +239,12 @@
 
 
 
-            <div class="panel-heading">发布时间</div>
+            <!--<div class="panel-heading">发布时间</div>
             <table>
                 <tr>
                     <td>
                         <div class="form-group">
-                            <div class="col-sm-2 control-label">日期（剩余可发布数）</div>
+                            <div class="col-sm-2 control-label" title="日期（剩余可发布数）">日期（剩余可发布数）</div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" v-model="taskRelease.releaseTime"
                                        placeholder="商品单价"/>
@@ -261,12 +261,12 @@
 
 
                 </tr>
-            </table>
+            </table>-->
 
 
 
 
-            <div class="form-group">
+            <div class="form-group" style="margin-top: 50px;margin-left: 70%">
                 <div class="col-sm-2 control-label"></div>
                 <input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
                 &nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
