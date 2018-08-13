@@ -17,6 +17,10 @@
         <result property="commission" column="commission"/>
         <result property="auditStatus" column="audit_status"/>
         <result property="orderStatus" column="order_status"/>
+        <result property="buyUser" column="buy_user"/>
+        <result property="orderNum" column="order_num"/>
+        <result property="sellerName" column="seller_name"/>
+        <result property="taskType" column="task_type"/>
     </resultMap>
 
 	<select id="queryObject" resultType="com.migo.entity.OrderEntity">
@@ -55,7 +59,11 @@
 			`task_id`, 
 			`commission`, 
 			`audit_status`, 
-			`order_status`
+			`order_status`, 
+			`buy_user`, 
+			`order_num`, 
+			`seller_name`, 
+			`task_type`
 		)
 		values
 		(
@@ -69,7 +77,11 @@
 			#{taskId}, 
 			#{commission}, 
 			#{auditStatus}, 
-			#{orderStatus}
+			#{orderStatus}, 
+			#{buyUser}, 
+			#{orderNum}, 
+			#{sellerName}, 
+			#{taskType}
 		)
 	</insert>
 	 
@@ -86,7 +98,11 @@
 			<if test="taskId != null">`task_id` = #{taskId}, </if>
 			<if test="commission != null">`commission` = #{commission}, </if>
 			<if test="auditStatus != null">`audit_status` = #{auditStatus}, </if>
-			<if test="orderStatus != null">`order_status` = #{orderStatus}</if>
+			<if test="orderStatus != null">`order_status` = #{orderStatus}, </if>
+			<if test="buyUser != null">`buy_user` = #{buyUser}, </if>
+			<if test="orderNum != null">`order_num` = #{orderNum}, </if>
+			<if test="sellerName != null">`seller_name` = #{sellerName}, </if>
+			<if test="taskType != null">`task_type` = #{taskType}</if>
 		</set>
 		where order_id = #{orderId}
 	</update>

@@ -10,7 +10,7 @@ import java.util.Date;
  * 
  * @author zhiqiu
  * @email fei6751803@163.com
- * @date 2018-08-12 14:28:40
+ * @date 2018-08-13 22:41:45
  */
 public class OrderEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -39,6 +39,14 @@ public class OrderEntity implements Serializable {
 	private String auditStatus;
 	//订单状态，1锁定,2已下单
 	private String orderStatus;
+	//
+	private String buyUser;
+	//
+	private String orderNum;
+	//
+	private String sellerName;
+	//
+	private String taskType;
 
 	/**
 	 * 设置：任务ID
@@ -183,5 +191,53 @@ public class OrderEntity implements Serializable {
 	 */
 	public String getOrderStatus() {
 		return orderStatus;
+	}
+	/**
+	 * 设置：
+	 */
+	public void setBuyUser(String buyUser) {
+		this.buyUser = buyUser;
+	}
+	/**
+	 * 获取：
+	 */
+	public String getBuyUser() {
+		return buyUser;
+	}
+	/**
+	 * 设置：
+	 */
+	public void setOrderNum(String orderNum) {
+		this.orderNum = orderNum;
+	}
+	/**
+	 * 获取：
+	 */
+	public String getOrderNum() {
+		return orderNum;
+	}
+	/**
+	 * 设置：
+	 */
+	public void setSellerName(String sellerName) {
+		this.sellerName = sellerName;
+	}
+	/**
+	 * 获取：
+	 */
+	public String getSellerName() {
+		return sellerName;
+	}
+	/**
+	 * 设置：
+	 */
+	public void setTaskType(String taskType) {
+		this.taskType = taskType;
+	}
+	/**
+	 * 获取：
+	 */
+	public String getTaskType() {
+		return taskType;
 	}
 }
