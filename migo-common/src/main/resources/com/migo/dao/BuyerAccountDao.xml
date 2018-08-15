@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.migo.dao.BuyerAccountDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.migo.entity.BuyerAccountEntity" id="buyerAccountMap">
+        <result property="id" column="id"/>
+        <result property="buyerName" column="buyer_name"/>
+        <result property="buyerAccount" column="buyer_account"/>
+        <result property="grade" column="grade"/>
+        <result property="userId" column="user_id"/>
+        <result property="imageUrl1" column="image_url1"/>
+        <result property="imageUrl2" column="image_url2"/>
+        <result property="status" column="status"/>
+        <result property="createTime" column="create_time"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+	<select id="queryObject" resultType="com.migo.entity.BuyerAccountEntity">
+		select * from tb_buyer_account where id = #{value}
+	</select>
+
+	<select id="queryList" resultType="com.migo.entity.BuyerAccountEntity">
+		select * from tb_buyer_account
+        <choose>
+            <when test="sidx != null and sidx.trim() != ''">
+                order by ${sidx} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="queryTotal" resultType="int">
+		select count(*) from tb_buyer_account 
+	</select>
+	 
+	<insert id="save" parameterType="com.migo.entity.BuyerAccountEntity">
+		insert into tb_buyer_account
+		(
+			`id`, 
+			`buyer_name`, 
+			`buyer_account`, 
+			`grade`, 
+			`user_id`, 
+			`image_url1`, 
+			`image_url2`, 
+			`status`, 
+			`create_time`, 
+			`remark`
+		)
+		values
+		(
+			#{id}, 
+			#{buyerName}, 
+			#{buyerAccount}, 
+			#{grade}, 
+			#{userId}, 
+			#{imageUrl1}, 
+			#{imageUrl2}, 
+			#{status}, 
+			#{createTime}, 
+			#{remark}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.migo.entity.BuyerAccountEntity">
+		update tb_buyer_account 
+		<set>
+			<if test="buyerName != null">`buyer_name` = #{buyerName}, </if>
+			<if test="buyerAccount != null">`buyer_account` = #{buyerAccount}, </if>
+			<if test="grade != null">`grade` = #{grade}, </if>
+			<if test="userId != null">`user_id` = #{userId}, </if>
+			<if test="imageUrl1 != null">`image_url1` = #{imageUrl1}, </if>
+			<if test="imageUrl2 != null">`image_url2` = #{imageUrl2}, </if>
+			<if test="status != null">`status` = #{status}, </if>
+			<if test="createTime != null">`create_time` = #{createTime}, </if>
+			<if test="remark != null">`remark` = #{remark}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="delete">
+		delete from tb_buyer_account where id = #{value}
+	</delete>
+	
+	<delete id="deleteBatch">
+		delete from tb_buyer_account where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

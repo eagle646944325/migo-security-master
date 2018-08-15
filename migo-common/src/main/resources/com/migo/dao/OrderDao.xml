@@ -21,6 +21,9 @@
         <result property="orderNum" column="order_num"/>
         <result property="sellerName" column="seller_name"/>
         <result property="taskType" column="task_type"/>
+        <result property="buyerNickName" column="buyer_nick_name"/>
+        <result property="buyerAccount" column="buyer_account"/>
+        <result property="imageUrl" column="image_url"/>
     </resultMap>
 
 	<select id="queryObject" resultType="com.migo.entity.OrderEntity">
@@ -63,7 +66,10 @@
 			`buy_user`, 
 			`order_num`, 
 			`seller_name`, 
-			`task_type`
+			`task_type`, 
+			`buyer_nick_name`, 
+			`buyer_account`, 
+			`image_url`
 		)
 		values
 		(
@@ -81,7 +87,10 @@
 			#{buyUser}, 
 			#{orderNum}, 
 			#{sellerName}, 
-			#{taskType}
+			#{taskType}, 
+			#{buyerNickName}, 
+			#{buyerAccount}, 
+			#{imageUrl}
 		)
 	</insert>
 	 
@@ -102,7 +111,10 @@
 			<if test="buyUser != null">`buy_user` = #{buyUser}, </if>
 			<if test="orderNum != null">`order_num` = #{orderNum}, </if>
 			<if test="sellerName != null">`seller_name` = #{sellerName}, </if>
-			<if test="taskType != null">`task_type` = #{taskType}</if>
+			<if test="taskType != null">`task_type` = #{taskType}, </if>
+			<if test="buyerNickName != null">`buyer_nick_name` = #{buyerNickName}, </if>
+			<if test="buyerAccount != null">`buyer_account` = #{buyerAccount}, </if>
+			<if test="imageUrl != null">`image_url` = #{imageUrl}</if>
 		</set>
 		where order_id = #{orderId}
 	</update>

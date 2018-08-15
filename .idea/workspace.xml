@@ -7,21 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="021cf476-5893-4f59-bde4-c8bcc1ee3c71" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/dao/UserMessageDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity/UserMessageEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/UserMessageService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/impl/UserMessageServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/utils/ApiReturn.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/resources/com/migo/dao/UserMessageDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-web/src/main/java/com/migo/controller/UserMessageController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-web/src/main/webapp/WEB-INF/page/generator/usermessage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/usermessage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/dao/BuyerAccountDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity/BuyerAccountEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/BuyerAccountService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/impl/BuyerAccountServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-common/src/main/resources/com/migo/dao/BuyerAccountDao.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-web/src/main/java/com/migo/controller/BuyerAccountController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-web/src/main/webapp/WEB-INF/page/generator/buyeraccount.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/buyeraccount.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiLoginController.java" afterPath="$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiLoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-api/src/main/java/com/migo/interceptor/AuthorizationInterceptor.java" afterPath="$PROJECT_DIR$/migo-api/src/main/java/com/migo/interceptor/AuthorizationInterceptor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity/OrderEntity.java" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity/OrderEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/utils/Query.java" afterPath="$PROJECT_DIR$/migo-common/src/main/java/com/migo/utils/Query.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migo-common/src/main/resources/com/migo/dao/OrderDao.xml" afterPath="$PROJECT_DIR$/migo-common/src/main/resources/com/migo/dao/OrderDao.xml" />
     </list>
     <ignored path="migo-security.iws" />
@@ -53,11 +49,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ApiLoginController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ApiLoginController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiLoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="256" column="17" selection-start-line="256" selection-start-column="17" selection-end-line="256" selection-end-column="17" />
+            <state relative-caret-position="198">
+              <caret line="375" column="33" selection-start-line="375" selection-start-column="21" selection-end-line="375" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,44 +64,50 @@
       <file leaf-file-name="OrderDao.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/migo-common/src/main/resources/com/migo/dao/OrderDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity/OrderEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-245">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuyerAccountService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/BuyerAccountService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuyerAccountController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/migo-web/src/main/java/com/migo/controller/BuyerAccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
               <folding>
-                <marker date="1534171304000" expanded="true" signature="1292:1340" ph="select * fro... tb_order" />
-                <marker date="1534171304000" expanded="true" signature="1815:1844" ph="select count... tb_order" />
-                <marker date="1534171304000" expanded="true" signature="1972:2535" ph="insert into tb_order... " />
-                <marker date="1534171304000" expanded="true" signature="2618:3659" ph="update tb_or... " />
-                <marker date="1534171304000" expanded="true" signature="3697:3743" ph="delete from " />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiReturn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/utils/ApiReturn.java">
+      <file leaf-file-name="BuyerAccountEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity/BuyerAccountEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/OrderService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderEntity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity/OrderEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="315">
+              <caret line="22" column="31" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -189,8 +191,9 @@
         <option value="$PROJECT_DIR$/migo-web/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/migo-web/src/main/webapp/WEB-INF/page/generator/task.html" />
         <option value="$PROJECT_DIR$/migo-common/src/main/java/com/migo/utils/Query.java" />
-        <option value="$PROJECT_DIR$/migo-api/src/main/java/com/migo/interceptor/AuthorizationInterceptor.java" />
         <option value="$PROJECT_DIR$/migo-common/src/main/java/com/migo/utils/ApiReturn.java" />
+        <option value="$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/impl/BuyerAccountDao.java" />
+        <option value="$PROJECT_DIR$/migo-api/src/main/java/com/migo/interceptor/AuthorizationInterceptor.java" />
         <option value="$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiLoginController.java" />
       </list>
     </option>
@@ -251,158 +254,7 @@
       <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-security-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-security-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-security-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-security-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-security-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-security-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="Scope" />
       <pane id="AndroidView" />
@@ -412,7 +264,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="OrderEntity.java&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/java/com/migo/entity/OrderEntity.java&#10;OrderDao.xml&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/resources/com/migo/dao/OrderDao.xml&#10;orderC&#9;PSI&#9;JAVA://com.migo.controller.OrderController&#10;userMessageC&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-web/src/main/java/com/migo/controller/UserMessageController.java&#10;api&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/api/ApiLoginController.java&#10;task.h&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-web/src/main/webapp/WEB-INF/page/generator/task.html&#10;taskC&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-web/src/main/java/com/migo/controller/TaskController.java&#10;SysC&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-web/src/main/java/com/migo/controller/SysConfigController.java&#10;sysConfigDao&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/resources/com/migo/dao/SysConfigDao.xml&#10;SYscON&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/java/com/migo/service/impl/SysConfigServiceImpl.java&#10;sysco&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/java/com/migo/entity/SysConfigEntity.java&#10;orderDao&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/resources/com/migo/dao/OrderDao.xml&#10;orderS&#9;PSI&#9;JAVA://com.migo.service.impl.OrderServiceImpl&#10;config&#9;PSI&#9;JAVA://com.migo.controller.SysConfigController&#10;TokenDao&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/resources/com/migo/dao/TokenDao.xml&#10;apiL&#9;PSI&#9;JAVA://com.migo.api.ApiLoginController&#10;index&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/index.html&#10;jquery&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/statics/libs/jquery.slimscroll.min.js&#10;taskP&#9;PSI&#9;JAVA://com.migo.entity.TaskPriceEntity&#10;tasksearch.js&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/js/generator/tasksearch.js&#10;tasksearch.html&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/WEB-INF/page/generator/tasksearch.html&#10;prod&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/js/generator/product.js&#10;product.&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/java/com/migo/controller/ProductController.java&#10;TaskEntity.java&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/java/com/migo/entity/TaskEntity.java&#10;productDao&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/resources/com/migo/dao/ProductDao.xml&#10;productC&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/java/com/migo/controller/ProductController.java&#10;ProductEntity&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/java/com/migo/entity/ProductEntity.java&#10;ProductDao.xml&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/resources/com/migo/dao/ProductDao.xml&#10;ProductEntity.java&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/java/com/migo/entity/ProductEntity.java&#10;oss.js&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/js/sys/oss.js&#10;product.js&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/js/generator/product.js&#10;product.html&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/WEB-INF/page/generator/product.html&#10;spring&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/resources/spring-mvc.xml&#10;SysConfigService&#9;PSI&#9;JAVA://com.migo.service.SysConfigService&#10;CloudStorageServi&#9;PSI&#9;JAVA://com.migo.oss.CloudStorageService&#10;TaskSearchDao&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/resources/com/migo/dao/TaskSearchDao.xml&#10;pro&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/resources/com/migo/dao/ProductDao.xml&#10;tokenService&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-api/src/main/java/com/migo/service/impl/TokenServiceImpl.java&#10;SysConfigDao&#9;FILE&#9;file:///Users/laughing/wks/migo/migo-security-master/migo-common/src/main/resources/com/migo/dao/SysConfigDao.xml&#10;role.html&#9;FILE&#9;file:///Users/laughing/wks/migo/migo-security-master/migo-web/src/main/webapp/WEB-INF/page/sys/role.html" />
+    <property name="SearchEverywhereHistoryKey" value="buyer&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-web/src/main/java/com/migo/controller/BuyerAccountController.java&#10;api&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/api/ApiLoginController.java&#10;db&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/resources/db.properties&#10;db.&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/resources/db.properties&#10;ossC&#9;PSI&#9;JAVA://com.migo.controller.SysOssController&#10;product.js&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-web/src/main/webapp/js/generator/product.js&#10;task.JS&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-web/src/main/webapp/js/generator/task.js&#10;taskSea&#9;PSI&#9;JAVA://com.migo.controller.TaskSearchController&#10;taskC&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-web/src/main/java/com/migo/controller/TaskController.java&#10;OrderEntity.java&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/java/com/migo/entity/OrderEntity.java&#10;OrderDao.xml&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/resources/com/migo/dao/OrderDao.xml&#10;orderC&#9;PSI&#9;JAVA://com.migo.controller.OrderController&#10;userMessageC&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-web/src/main/java/com/migo/controller/UserMessageController.java&#10;task.h&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-web/src/main/webapp/WEB-INF/page/generator/task.html&#10;SysC&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-web/src/main/java/com/migo/controller/SysConfigController.java&#10;sysConfigDao&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/resources/com/migo/dao/SysConfigDao.xml&#10;SYscON&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/java/com/migo/service/impl/SysConfigServiceImpl.java&#10;sysco&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/java/com/migo/entity/SysConfigEntity.java&#10;orderDao&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/resources/com/migo/dao/OrderDao.xml&#10;orderS&#9;PSI&#9;JAVA://com.migo.service.impl.OrderServiceImpl&#10;config&#9;PSI&#9;JAVA://com.migo.controller.SysConfigController&#10;TokenDao&#9;FILE&#9;file:///Users/laughing/wks/migo-security-master/migo-common/src/main/resources/com/migo/dao/TokenDao.xml&#10;apiL&#9;PSI&#9;JAVA://com.migo.api.ApiLoginController&#10;index&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/index.html&#10;jquery&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/statics/libs/jquery.slimscroll.min.js&#10;taskP&#9;PSI&#9;JAVA://com.migo.entity.TaskPriceEntity&#10;tasksearch.js&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/js/generator/tasksearch.js&#10;tasksearch.html&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/WEB-INF/page/generator/tasksearch.html&#10;prod&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/js/generator/product.js&#10;product.&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/java/com/migo/controller/ProductController.java&#10;TaskEntity.java&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/java/com/migo/entity/TaskEntity.java&#10;productDao&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/resources/com/migo/dao/ProductDao.xml&#10;productC&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/java/com/migo/controller/ProductController.java&#10;ProductEntity&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/java/com/migo/entity/ProductEntity.java&#10;ProductDao.xml&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/resources/com/migo/dao/ProductDao.xml&#10;ProductEntity.java&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/java/com/migo/entity/ProductEntity.java&#10;oss.js&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/js/sys/oss.js&#10;product.html&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/webapp/WEB-INF/page/generator/product.html&#10;spring&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-web/src/main/resources/spring-mvc.xml&#10;SysConfigService&#9;PSI&#9;JAVA://com.migo.service.SysConfigService&#10;CloudStorageServi&#9;PSI&#9;JAVA://com.migo.oss.CloudStorageService&#10;TaskSearchDao&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/resources/com/migo/dao/TaskSearchDao.xml&#10;pro&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-common/src/main/resources/com/migo/dao/ProductDao.xml&#10;tokenService&#9;FILE&#9;file://E:/wks-ide/migo-security-master/migo-api/src/main/java/com/migo/service/impl/TokenServiceImpl.java&#10;SysConfigDao&#9;FILE&#9;file:///Users/laughing/wks/migo/migo-security-master/migo-common/src/main/resources/com/migo/dao/SysConfigDao.xml&#10;role.html&#9;FILE&#9;file:///Users/laughing/wks/migo/migo-security-master/migo-web/src/main/webapp/WEB-INF/page/sys/role.html" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -424,11 +276,11 @@
       <recent name="com.migo.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity" />
       <recent name="$PROJECT_DIR$/migo-common/src/main/resources/com/migo/dao" />
-      <recent name="$PROJECT_DIR$/migo-web/src/main/webapp/WEB-INF/page/generator" />
-      <recent name="$PROJECT_DIR$/migo-web/src/main/webapp/js/generator" />
-      <recent name="$PROJECT_DIR$/migo-web/src/main/webapp/js" />
+      <recent name="$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity" />
+      <recent name="$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/impl" />
+      <recent name="$PROJECT_DIR$/migo-common/src/main/java/com/migo/service" />
+      <recent name="$PROJECT_DIR$/migo-common/src/main/java/com/migo/dao" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1020,85 +872,87 @@
       <workItem from="1533117096559" duration="4245000" />
       <workItem from="1533277099284" duration="8489000" />
       <workItem from="1533288151398" duration="2704000" />
-      <workItem from="1534063453698" duration="7784000" />
+      <workItem from="1534063453698" duration="14023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66502000" />
+    <option name="totallyTimeSpent" value="72741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="980" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39829606" sideWeight="0.5021322" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.45366797" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.45366797" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39559165" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39559165" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946634" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.4978678" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26373628" sideWeight="0.4435028" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26373628" sideWeight="0.4435028" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26399395" sideWeight="0.55649716" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="combo" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.54633206" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.54633206" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39829606" sideWeight="0.5021322" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.45366797" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.45366797" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39559165" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39559165" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32830626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946634" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.54633206" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.54633206" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.4978678" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26373628" sideWeight="0.4435028" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26399395" sideWeight="0.55649716" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1144,30 +998,42 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiLoginController.java</url>
-          <line>91</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiLoginController.java</url>
-          <line>160</line>
+          <line>193</line>
           <properties />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiLoginController.java</url>
-          <line>183</line>
+          <line>216</line>
           <properties />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiLoginController.java</url>
-          <line>202</line>
+          <line>300</line>
           <properties />
-          <option name="timeStamp" value="47" />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiLoginController.java</url>
+          <line>323</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiLoginController.java</url>
+          <line>362</line>
+          <properties />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/interceptor/AuthorizationInterceptor.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="48" />
+      <option name="time" value="56" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1176,176 +1042,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/statics/libs/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity/TaskPriceEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="37" column="36" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="36" />
-          <folding>
-            <element signature="e#547#548#0" expanded="false" />
-            <element signature="e#571#572#0" expanded="false" />
-            <element signature="e#620#621#0" expanded="false" />
-            <element signature="e#655#656#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity/TaskReleaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/task.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/statics/datepicker/ui/jquery-ui.custom.js" />
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/index1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/jquery.ui.all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/jquery.ui.datepicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/jquery.ui.core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/jquery.ui.core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/jquery.ui.base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/java/com/migo/aop/SysLogAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="58" column="46" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/entity/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiTestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiRegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="49" column="24" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/dao/TokenDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-common/src/main/resources/com/migo/dao/TokenDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="29" />
-          <folding>
-            <marker date="1534061193000" expanded="true" signature="1085:1132" ph="select * fro... tb_token" />
-            <marker date="1534061193000" expanded="true" signature="1216:1261" ph="select * fro... tb_token" />
-            <marker date="1534061193000" expanded="true" signature="1342:1516" ph="insert into tb_token... " />
-            <marker date="1534061193000" expanded="true" signature="1599:1852" ph="update tb_to... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/utils/R.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="28" column="47" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/service/impl/TokenServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -1381,14 +1077,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/impl/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -1410,8 +1098,8 @@
         <state relative-caret-position="210">
           <caret line="39" column="37" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="37" />
           <folding>
-            <element signature="e#1928#1929#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
+            <element signature="e#1928#1929#0" expanded="false" />
+            <element signature="e#1978#1979#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1442,22 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
           <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/java/com/migo/controller/TaskController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1496,14 +1168,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
           <caret line="272" column="18" selection-start-line="272" selection-start-column="18" selection-end-line="272" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/usermessage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1550,30 +1214,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/interceptor/AuthorizationInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-web/src/main/java/com/migo/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/utils/ApiReturn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1582,35 +1222,267 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiLoginController.java">
+    <entry file="file://$PROJECT_DIR$/migo-web/src/main/java/com/migo/controller/TaskController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="256" column="17" selection-start-line="256" selection-start-column="17" selection-end-line="256" selection-end-column="17" />
+        <state relative-caret-position="141">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="38" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-web/src/main/java/com/migo/controller/TaskSearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
+          <folding>
+            <element signature="e#5748#5749#0" expanded="false" />
+            <element signature="e#5784#5785#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/TaskService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/TaskSearchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity/TaskSearchEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-web/src/main/java/com/migo/service/SysOssService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-web/src/main/java/com/migo/controller/SysOssController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="137" column="1" selection-start-line="137" selection-start-column="1" selection-end-line="150" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/usermessage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-660">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/resources/db.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="62" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/WEB-INF/page/generator/buyeraccount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-web/src/main/java/com/migo/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/impl/BuyerAccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/dao/BuyerAccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/resources/com/migo/dao/BuyerAccountDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1534342476000" expanded="true" signature="952:1002" ph="select * fro... tb_buyer_account" />
+            <marker date="1534342476000" expanded="true" signature="1486:1523" ph="select count... tb_buyer_account" />
+            <marker date="1534342476000" expanded="true" signature="1612:1985" ph="insert into tb_buyer_account... " />
+            <marker date="1534342476000" expanded="true" signature="2075:2706" ph="update tb_bu... " />
+            <marker date="1534342476000" expanded="true" signature="2744:2792" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/impl/BuyerAccountServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/buyeraccount.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="462" column="22" selection-start-line="462" selection-start-column="22" selection-end-line="462" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE.jar!/org/springframework/web/servlet/HandlerExecutionChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/interceptor/AuthorizationInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="74" column="11" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/service/BuyerAccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-web/src/main/java/com/migo/controller/BuyerAccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/migo-common/src/main/resources/com/migo/dao/OrderDao.xml">
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity/BuyerAccountEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <marker date="1534171304000" expanded="true" signature="1292:1340" ph="select * fro... tb_order" />
-            <marker date="1534171304000" expanded="true" signature="1815:1844" ph="select count... tb_order" />
-            <marker date="1534171304000" expanded="true" signature="1972:2535" ph="insert into tb_order... " />
-            <marker date="1534171304000" expanded="true" signature="2618:3659" ph="update tb_or... " />
-            <marker date="1534171304000" expanded="true" signature="3697:3743" ph="delete from " />
-          </folding>
+        <state relative-caret-position="315">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/migo-common/src/main/java/com/migo/entity/OrderEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="-245">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-common/src/main/resources/com/migo/dao/OrderDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migo-api/src/main/java/com/migo/api/ApiLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="375" column="33" selection-start-line="375" selection-start-column="21" selection-end-line="375" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

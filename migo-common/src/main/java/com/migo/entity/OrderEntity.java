@@ -10,7 +10,7 @@ import java.util.Date;
  * 
  * @author zhiqiu
  * @email fei6751803@163.com
- * @date 2018-08-13 22:41:45
+ * @date 2018-08-15 22:14:37
  */
 public class OrderEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -39,7 +39,7 @@ public class OrderEntity implements Serializable {
 	private String auditStatus;
 	//订单状态，1锁定,2已下单
 	private String orderStatus;
-	//
+	//买家用户ID
 	private String buyUser;
 	//
 	private String orderNum;
@@ -47,6 +47,12 @@ public class OrderEntity implements Serializable {
 	private String sellerName;
 	//
 	private String taskType;
+	//买家账户昵称
+	private String buyerNickName;
+	//买家账户
+	private String buyerAccount;
+	//
+	private String imageUrl;
 
 	/**
 	 * 设置：任务ID
@@ -193,13 +199,13 @@ public class OrderEntity implements Serializable {
 		return orderStatus;
 	}
 	/**
-	 * 设置：
+	 * 设置：买家用户ID
 	 */
 	public void setBuyUser(String buyUser) {
 		this.buyUser = buyUser;
 	}
 	/**
-	 * 获取：
+	 * 获取：买家用户ID
 	 */
 	public String getBuyUser() {
 		return buyUser;
@@ -239,5 +245,41 @@ public class OrderEntity implements Serializable {
 	 */
 	public String getTaskType() {
 		return taskType;
+	}
+	/**
+	 * 设置：买家账户昵称
+	 */
+	public void setBuyerNickName(String buyerNickName) {
+		this.buyerNickName = buyerNickName;
+	}
+	/**
+	 * 获取：买家账户昵称
+	 */
+	public String getBuyerNickName() {
+		return buyerNickName;
+	}
+	/**
+	 * 设置：买家账户
+	 */
+	public void setBuyerAccount(String buyerAccount) {
+		this.buyerAccount = buyerAccount;
+	}
+	/**
+	 * 获取：买家账户
+	 */
+	public String getBuyerAccount() {
+		return buyerAccount;
+	}
+	/**
+	 * 设置：
+	 */
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+	/**
+	 * 获取：
+	 */
+	public String getImageUrl() {
+		return imageUrl;
 	}
 }
