@@ -54,7 +54,7 @@ var vm = new Vue({
         showList: true,
         showTaskSearch: true,
         title: null,
-        task: {},
+        task: [],
         product: {},
         taskSearch: {},
         taskSearchList: [],
@@ -69,7 +69,7 @@ var vm = new Vue({
         add: function () {
             vm.showList = false;
             vm.title = "新增";
-            vm.task = {};
+            vm.task = [];
             vm.getownerProduct();
         },
         update: function (event) {
@@ -84,11 +84,18 @@ var vm = new Vue({
             vm.getownerProduct();
         },
         saveOrUpdate: function (event) {
+           var taskSearchPiceEntityBo={};
             var url = vm.task.taskId == null ? "../task/save" : "../task/update";
+           /*var  taskList = vm.getTaskList();
+            var params = {
+                taskSearchList:taskList
+            };*/
             $.ajax({
-                type: "POST",
-                url: url,
-                data: JSON.stringify(vm.task),
+                type:'POST',
+                url:url,
+                data:JSON.stringify(vm.getTaskList()),
+                contentType: "application/json",
+                dataType : 'json',
                 success: function (r) {
                     if (r.code === 0) {
                         alert('操作成功', function (index) {
@@ -139,7 +146,43 @@ var vm = new Vue({
                 });
             });
         },
-        getInfo: function (taskId) {
+        getTaskList:function(){
+            var taskJson={};
+            //搜索信息
+            var taskListSize= $("[id='teskSearchList']").length;
+            taskJson.tasksearchlist=new Array();
+            for(var i=0;i<taskListSize;i++){
+                var taskListId=$("[id='teskSearchList']")[i];
+                var taskSearch=new Object();
+                taskSearch.flowType=taskListId.children[0].innerHTML;
+                taskSearch.keyWord=taskListId.children[1].innerHTML;
+                taskSearch.remark=taskListId.children[2].innerHTML;
+                taskJson.tasksearchlist.push(taskSearch);
+            }
+            //定价信息
+            var taskPiceListSize= $("[id='teskPiceList']").length;
+            taskJson.taskPiceList=new Array();
+            for(var i=0;i<taskPiceListSize;i++){
+                var taskPiceListId=$("[id='teskPiceList']")[i];
+                var taskPice=new Object();
+                taskPice.goodsPrice=taskPiceListId.children[0].innerHTML;
+                taskPice.express=taskPiceListId.children[1].innerHTML;
+                taskPice.model=taskPiceListId.children[2].innerHTML;
+                taskPice.number=taskPiceListId.children[3].innerHTML;
+                taskPice.taskNumber=taskPiceListId.children[4].innerHTML;
+                taskPice.commission=taskPiceListId.children[5].innerHTML;
+                taskJson.taskPiceList.push(taskPice);
+            }
+            //任务信息
+            taskJson.task={};
+            taskJson.task.createTime=vm.task.createTime;
+            taskJson.task.expressType=vm.task.expressType;
+            taskJson.task.productId=vm.task.productId;
+            taskJson.task.taskType=vm.task.taskType;
+
+            return  taskJson;
+        }
+        ,getInfo: function (taskId) {
             $.get("../task/info/" + taskId, function (r) {
                 vm.task = r.task;
             });

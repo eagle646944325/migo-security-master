@@ -57,6 +57,29 @@
 			#{taskId}
 		)
 	</insert>
+
+	<insert id="saveBatch" parameterType="java.util.List">
+		insert into tb_task_Price
+		(
+		`goods_price`,
+		`express`,
+		`model`,
+		`number`,
+		`task_number`,
+		`task_id`
+		)
+		values
+		<foreach collection="list" item="item" index="index" separator=",">
+			(
+			#{item.goodsPrice},
+			#{item.express},
+			#{item.model},
+			#{item.number},
+			#{item.taskNumber},
+			#{item.taskId}
+			)
+		</foreach>
+	</insert>
 	 
 	<update id="update" parameterType="com.migo.entity.TaskPriceEntity">
 		update tb_task_Price 

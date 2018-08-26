@@ -54,7 +54,26 @@
 			#{taskId}
 		)
 	</insert>
-	 
+	<insert id="saveBatch" parameterType="java.util.List">
+		insert into tb_task_search
+		(
+		`flow_type`,
+		`key_word`,
+		`number`,
+		`remark`,
+		`task_id`
+		)
+		values
+		<foreach collection="list" item="item" index="index" separator=",">
+			(
+			#{item.flowType},
+			#{item.keyWord},
+			#{item.number},
+			#{item.remark},
+			#{item.taskId}
+			)
+		</foreach>
+	</insert>
 	<update id="update" parameterType="com.migo.entity.TaskSearchEntity">
 		update tb_task_search 
 		<set>

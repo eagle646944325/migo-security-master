@@ -27,4 +27,6 @@ public interface TaskSearchService {
 	void delete(Long searchId);
 	
 	void deleteBatch(Long[] searchIds);
+
+	void saveBatch(List<TaskSearchEntity> list);
 }

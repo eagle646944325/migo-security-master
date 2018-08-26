@@ -1,6 +1,7 @@
 package com.migo.service;
 
 import com.migo.entity.TaskPriceEntity;
+import com.migo.entity.TaskSearchEntity;
 
 import java.util.List;
 import java.util.Map;
@@ -27,4 +28,6 @@ public interface TaskPriceService {
 	void delete(Long priceId);
 	
 	void deleteBatch(Long[] priceIds);
+
+	void saveBatch(List<TaskPriceEntity> list);
 }
