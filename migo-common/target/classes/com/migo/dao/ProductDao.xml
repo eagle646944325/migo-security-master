@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.migo.dao.ProductDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.migo.entity.ProductEntity" id="productMap">
+        <result property="id" column="id"/>
+        <result property="productName" column="product_name"/>
+        <result property="contacts" column="contacts"/>
+        <result property="productUrl" column="product_url"/>
+        <result property="productImage1" column="product_image1"/>
+        <result property="productImage2" column="product_image2"/>
+        <result property="remark" column="remark"/>
+        <result property="productType" column="product_type"/>
+        <result property="createData" column="create_data"/>
+        <result property="createUserId" column="create_user_id"/>
+        <result property="createUserName" column="create_user_name"/>
+    </resultMap>
+
+	<select id="queryObject" resultType="com.migo.entity.ProductEntity">
+		select * from tb_product where id = #{value}
+	</select>
+
+	<select id="queryList" resultType="com.migo.entity.ProductEntity">
+		select * from tb_product where create_user_id = #{createUserId}
+        <choose>
+            <when test="sidx != null and sidx.trim() != ''">
+                order by ${sidx} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="queryTotal" resultType="int">
+		select count(*) from tb_product where create_user_id = #{createUserId}
+	</select>
+	 
+	<insert id="save" parameterType="com.migo.entity.ProductEntity" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_product
+		(
+			`product_name`, 
+			`contacts`, 
+			`product_url`, 
+			`product_image1`, 
+			`product_image2`, 
+			`remark`, 
+			`product_type`, 
+			`create_data`, 
+			`create_user_id`, 
+			`create_user_name`
+		)
+		values
+		(
+			#{productName}, 
+			#{contacts}, 
+			#{productUrl}, 
+			#{productImage1}, 
+			#{productImage2}, 
+			#{remark}, 
+			#{productType}, 
+			#{createData}, 
+			#{createUserId}, 
+			#{createUserName}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.migo.entity.ProductEntity">
+		update tb_product 
+		<set>
+			<if test="productName != null">`product_name` = #{productName}, </if>
+			<if test="contacts != null">`contacts` = #{contacts}, </if>
+			<if test="productUrl != null">`product_url` = #{productUrl}, </if>
+			<if test="productImage1 != null">`product_image1` = #{productImage1}, </if>
+			<if test="productImage2 != null">`product_image2` = #{productImage2}, </if>
+			<if test="remark != null">`remark` = #{remark}, </if>
+			<if test="productType != null">`product_type` = #{productType}, </if>
+			<if test="createData != null">`create_data` = #{createData}, </if>
+			<if test="createUserId != null">`create_user_id` = #{createUserId}, </if>
+			<if test="createUserName != null">`create_user_name` = #{createUserName}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="delete">
+		delete from tb_product where id = #{value}
+	</delete>
+	
+	<delete id="deleteBatch">
+		delete from tb_product where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

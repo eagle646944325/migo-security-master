@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>任务搜索条件</title>
+#parse("sys/header.html")
+</head>
+<body>
+<div id="rrapp" v-cloak>
+	<div v-show="showList">
+		<div class="grid-btn">
+			#if($shiro.hasPermission("tasksearch:save"))
+			<a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+			#end
+			#if($shiro.hasPermission("tasksearch:update"))
+			<a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+			#end
+			#if($shiro.hasPermission("tasksearch:delete"))
+			<a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+			#end
+		</div>
+	    <table id="jqGrid"></table>
+	    <div id="jqGridPager"></div>
+    </div>
+    
+    <div v-show="!showTaskSearch" class="panel panel-default">
+		<div class="panel-heading">{{title}}</div>
+		<form class="form-horizontal">
+											<div class="form-group">
+			   	<div class="col-sm-2 control-label">流量入口</div>
+			   	<div class="col-sm-10">
+			      <input type="text" class="form-control" v-model="taskSearch.flowType" placeholder="流量入口"/>
+			    </div>
+			</div>
+									<div class="form-group">
+			   	<div class="col-sm-2 control-label">关键字</div>
+			   	<div class="col-sm-10">
+			      <input type="text" class="form-control" v-model="taskSearch.keyWord" placeholder="关键字"/>
+			    </div>
+			</div>
+									<div class="form-group">
+			   	<div class="col-sm-2 control-label">数量</div>
+			   	<div class="col-sm-10">
+			      <input type="text" class="form-control" v-model="taskSearch.number" placeholder="数量"/>
+			    </div>
+			</div>
+									<div class="form-group">
+			   	<div class="col-sm-2 control-label">备注</div>
+			   	<div class="col-sm-10">
+			      <input type="text" class="form-control" v-model="taskSearch.remark" placeholder="备注"/>
+			    </div>
+			</div>
+									<div class="form-group">
+			   	<div class="col-sm-2 control-label">任务ID</div>
+			   	<div class="col-sm-10">
+			      <input type="text" class="form-control" v-model="taskSearch.taskId" placeholder="任务ID"/>
+			    </div>
+			</div>
+							<div class="form-group">
+				<div class="col-sm-2 control-label"></div> 
+				<input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+				&nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+			</div>
+		</form>
+	</div>
+</div>
+
+<script src="${rc.contextPath}/js/generator/tasksearch.js?_${date.systemTime}"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/annotation/LoginUser.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/api/ApiRegisterController.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/dao/TokenDao.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/entity/UserEntity.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/resolver/LoginUserHandlerMethodArgumentResolver.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/service/UserService.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/annotation/IgnoreAuth.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/api/ApiLoginController.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/api/ApiTestController.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/interceptor/AuthorizationInterceptor.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/service/impl/UserServiceImpl.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/dao/UserDao.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/entity/TokenEntity.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/service/TokenService.java
+/Users/laughing/wks/migo-security-master/migo-api/src/main/java/com/migo/service/impl/TokenServiceImpl.java

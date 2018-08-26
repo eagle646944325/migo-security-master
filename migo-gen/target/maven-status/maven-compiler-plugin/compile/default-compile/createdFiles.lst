@@ -1,0 +1,7 @@
+com/migo/utils/GenUtils.class
+com/migo/entity/TableEntity.class
+com/migo/service/SysGeneratorService.class
+com/migo/service/impl/SysGeneratorServiceImpl.class
+com/migo/dao/SysGeneratorDao.class
+com/migo/controller/SysGeneratorController.class
+com/migo/entity/ColumnEntity.class

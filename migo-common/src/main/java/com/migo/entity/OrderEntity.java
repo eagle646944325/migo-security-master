@@ -7,14 +7,14 @@ import java.util.Date;
 
 /**
  * 任务表
- * 
+ *
  * @author zhiqiu
  * @email fei6751803@163.com
- * @date 2018-08-15 22:14:37
+ * @date 2018-08-26 13:30:56
  */
 public class OrderEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	//任务ID
 	private Long orderId;
 	//任务类型
@@ -53,6 +53,18 @@ public class OrderEntity implements Serializable {
 	private String buyerAccount;
 	//
 	private String imageUrl;
+	//标签
+	private String lable;
+
+	private Double guarantyGold;
+
+	public Double getGuarantyGold() {
+		return guarantyGold;
+	}
+
+	public void setGuarantyGold(Double guarantyGold) {
+		this.guarantyGold = guarantyGold;
+	}
 
 	/**
 	 * 设置：任务ID
@@ -282,4 +294,17 @@ public class OrderEntity implements Serializable {
 	public String getImageUrl() {
 		return imageUrl;
 	}
+	/**
+	 * 设置：标签
+	 */
+	public void setLable(String lable) {
+		this.lable = lable;
+	}
+	/**
+	 * 获取：标签
+	 */
+	public String getLable() {
+		return lable;
+	}
+
 }
