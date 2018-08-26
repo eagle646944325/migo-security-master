@@ -51,5 +51,10 @@ public class TaskPriceServiceImpl implements TaskPriceService {
 	public void deleteBatch(Long[] priceIds){
 		taskPriceDao.deleteBatch(priceIds);
 	}
-	
+
+	@Override
+	public void saveBatch(List<TaskPriceEntity> list) {
+		taskPriceDao.saveBatch(list);
+	}
+
 }

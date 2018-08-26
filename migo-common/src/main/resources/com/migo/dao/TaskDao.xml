@@ -63,7 +63,7 @@
 			#{createUserName}
 		)
 	</insert>
-	 
+
 	<update id="update" parameterType="com.migo.entity.TaskEntity">
 		update tb_task 
 		<set>

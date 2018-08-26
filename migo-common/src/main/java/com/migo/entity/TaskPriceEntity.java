@@ -37,7 +37,7 @@ public class TaskPriceEntity implements Serializable {
 	public void setCommission(String commission) {
 		this.commission = commission;
 	}
-
+	//任务佣金
 	private String commission;
 	/**
 	 * 设置：价格I

@@ -5,22 +5,22 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.migo.entity.ProductEntity;
-import com.migo.entity.SysUserEntity;
+import com.migo.entity.*;
 import com.migo.service.ProductService;
+import com.migo.service.TaskPriceService;
+import com.migo.service.TaskSearchService;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import com.migo.entity.TaskEntity;
 import com.migo.service.TaskService;
 import com.migo.utils.PageUtils;
 import com.migo.utils.Query;
 import com.migo.utils.R;
+
+import javax.servlet.http.HttpServletRequest;
 
 
 /**
@@ -37,6 +37,10 @@ public class TaskController   extends AbstractController{
 	private TaskService taskService;
 	@Autowired
 	private ProductService productService;
+	@Autowired
+	private TaskSearchService taskSearchService;
+	@Autowired
+	private TaskPriceService taskPriceService;
 	/**
 	 * 列表
 	 */
@@ -83,15 +87,32 @@ public class TaskController   extends AbstractController{
 	 */
 	@RequestMapping("/save")
 	@RequiresPermissions("task:save")
-	public R save(@RequestBody TaskEntity task){
+	@ResponseBody
+	public R save(@RequestBody JSONObject obj){
 		SysUserEntity sysUserEntity=getUser();
-		task.setCreateUserId(sysUserEntity.getUserId()+"");
+		TaskEntity task =(TaskEntity) JSONObject.toBean((JSONObject) obj.get("task"),TaskEntity.class);
+		JSONArray taskSearchJson = JSONArray.fromObject(obj.get("tasksearchlist"));
+		List<TaskSearchEntity> taskSearchEntity= (List<TaskSearchEntity>) JSONArray.toCollection(taskSearchJson, TaskSearchEntity.class);
+		JSONArray taskPriceJson = JSONArray.fromObject(obj.get("taskPiceList"));
+		List<TaskPriceEntity> taskPriceEntity= (List<TaskPriceEntity>) JSONArray.toCollection(taskPriceJson, TaskPriceEntity.class);
+
+		task.setCreateUserId(sysUserEntity.getUserId() + "");
 		task.setCreateUserName(sysUserEntity.getUsername());
 		task.setCreateTime(new Date());
 		long productId=Long.valueOf(task.getProductId());
 		ProductEntity productEntity=productService.queryObject(productId);
 		task.setProductName(productEntity.getProductName());
+
+		for(int i = 0;i<taskSearchEntity.size();i++){
+			taskSearchEntity.get(i).setTaskId(task.getTaskId().toString());
+		}
+
+		for(int i = 0;i<taskPriceEntity.size();i++){
+			taskPriceEntity.get(i).setTaskId(task.getTaskId().toString());
+		}
 		taskService.save(task);
+		taskSearchService.saveBatch(taskSearchEntity);
+		taskPriceService.saveBatch(taskPriceEntity);
 		return R.ok();
 	}
 	

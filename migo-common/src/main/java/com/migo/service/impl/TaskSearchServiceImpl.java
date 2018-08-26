@@ -51,5 +51,10 @@ public class TaskSearchServiceImpl implements TaskSearchService {
 	public void deleteBatch(Long[] searchIds){
 		taskSearchDao.deleteBatch(searchIds);
 	}
-	
+
+	@Override
+	public void saveBatch(List<TaskSearchEntity> list) {
+		taskSearchDao.saveBatch(list);
+	}
+
 }

@@ -25,7 +25,7 @@ import java.util.Map;
  * @email fei6751803@163.com
  */
 public interface BaseDao<T> {
-    void save(T t);
+    long save(T t);
 
     void save(Map<String, Object> map);
 
