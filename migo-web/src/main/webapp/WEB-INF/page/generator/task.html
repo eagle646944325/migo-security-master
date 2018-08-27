@@ -40,7 +40,7 @@
                         <div class="form-group-left">
                             <div class="col-sm-2 control-label" title="创建时间">创建时间</div>
                             <div class="col-sm-10">
-                                <input style="width:226px;background: #fefefe;border: 1px solid #bbb;font-size: 14px;color: #333;padding: 7px;border-radius: 3px;" type="text" class="date_picker">
+                                <input type="text" class="form-control" id="selectDate"   readonly="readonly"  placeholder="创建时间" @change="createTime"/>
                             </div>
                         </div>
                     </td>
@@ -91,14 +91,14 @@
                     </td>
 
 
-               <!--     <td>
-                        <div class="form-group">
-                            <div class="col-sm-2 control-label">数量</div>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" v-model="taskSearch.number" placeholder="数量"/>
-                            </div>
-                        </div>
-                    </td>-->
+                    <!--     <td>
+                             <div class="form-group">
+                                 <div class="col-sm-2 control-label">数量</div>
+                                 <div class="col-sm-10">
+                                     <input type="text" class="form-control" v-model="taskSearch.number" placeholder="数量"/>
+                                 </div>
+                             </div>
+                         </td>-->
                     <td>
                         <div class="form-group">
                             <div class="col-sm-2 control-label" title="备注">备注</div>
@@ -276,8 +276,9 @@
 
 
 </div>
-
+<link rel="stylesheet" type="text/css" href="${rc.contextPath}/js/generator/jquery-ui-1.7.1.custom.css?_${date.systemTime}">
 <link rel="stylesheet" href="${rc.contextPath}/js/generator/jquery.ui.all.css?_${date.systemTime}">
+<link rel="stylesheet" href="${rc.contextPath}/js/generator/jquery.datetimepicker.css?_${date.systemTime}">
 <!--<script src="${rc.contextPath}/js/generator/jquery-1.8.3.js"></script>-->
 <script src="${rc.contextPath}/js/generator/jquery.ui.core.js?_${date.systemTime}"></script>
 
@@ -287,5 +288,6 @@
 <script src="${rc.contextPath}/js/generator/jquery.ui.base.css?_${date.systemTime}"></script>
 
 <script src="${rc.contextPath}/js/generator/task.js?_${date.systemTime}"></script>
+<script src="${rc.contextPath}/js/generator/jquery-datetimepicker.js?_${date.systemTime}"></script>
 </body>
 </html>
