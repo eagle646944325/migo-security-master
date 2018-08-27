@@ -47,6 +47,7 @@ import com.migo.utils.Query;
 import com.migo.utils.R;
 import com.migo.utils.RRException;
 import com.migo.validator.Assert;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import org.apache.commons.collections.map.HashedMap;
@@ -204,6 +205,12 @@ public class ApiLoginController {
         map.put("taskType",taskType);
         Query query = new Query(map);
         List<OrderEntity> orderList= orderService.queryList(query);
+        List<OrderEntity> orderList2=new ArrayList<>();
+        for(OrderEntity orderEntity: orderList){
+            Double s=  Double.parseDouble(orderEntity.getGoodsPrice()) *   Double.parseDouble(orderEntity.getTaskNumber());
+            orderEntity.setGuarantyGold(s);
+            orderList2.add(orderEntity);
+        }
         Map<String, Object> list=new HashedMap();
         list.put("list",orderList);
         return   ApiReturn.ok(list);
