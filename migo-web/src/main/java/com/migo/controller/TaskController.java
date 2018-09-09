@@ -102,7 +102,7 @@ public class TaskController   extends AbstractController{
 		long productId=Long.valueOf(task.getProductId());
 		ProductEntity productEntity=productService.queryObject(productId);
 		task.setProductName(productEntity.getProductName());
-
+		taskService.save(task);
 		for(int i = 0;i<taskSearchEntity.size();i++){
 			taskSearchEntity.get(i).setTaskId(task.getTaskId().toString());
 		}
@@ -110,7 +110,7 @@ public class TaskController   extends AbstractController{
 		for(int i = 0;i<taskPriceEntity.size();i++){
 			taskPriceEntity.get(i).setTaskId(task.getTaskId().toString());
 		}
-		taskService.save(task);
+
 		taskSearchService.saveBatch(taskSearchEntity);
 		taskPriceService.saveBatch(taskPriceEntity);
 		return R.ok();

@@ -1,6 +1,8 @@
 $(function () {
 
-
+    $(document).ready(function() {
+        $('#selectDate').datetimepicker();
+    });
 
 
     $("#jqGrid").jqGrid({
@@ -45,7 +47,7 @@ $(function () {
 
 
 
-    $("#datepicker").datepicker();
+   // $('#selectDate').datetimepicker();
 });
 
 var vm = new Vue({
@@ -84,18 +86,18 @@ var vm = new Vue({
             vm.getownerProduct();
         },
         saveOrUpdate: function (event) {
-           var taskSearchPiceEntityBo={};
+            var taskSearchPiceEntityBo = {};
             var url = vm.task.taskId == null ? "../task/save" : "../task/update";
-           /*var  taskList = vm.getTaskList();
-            var params = {
-                taskSearchList:taskList
-            };*/
+            /*var  taskList = vm.getTaskList();
+             var params = {
+             taskSearchList:taskList
+             };*/
             $.ajax({
-                type:'POST',
-                url:url,
-                data:JSON.stringify(vm.getTaskList()),
+                type: 'POST',
+                url: url,
+                data: JSON.stringify(vm.getTaskList()),
                 contentType: "application/json",
-                dataType : 'json',
+                dataType: 'json',
                 success: function (r) {
                     if (r.code === 0) {
                         alert('操作成功', function (index) {
@@ -108,8 +110,10 @@ var vm = new Vue({
                     }
                 }
             });
-        },
-        addTaskSearch: function () {
+        },createTime: function(){
+            debugger;
+            vm.task.createTime=$("#selectDate").val();
+         },addTaskSearch: function () {
             this.taskSearchList.push(this.taskSearch);
             // 添加完newPerson对象后，重置newPerson对象
             this.taskSearch = {};

@@ -8,5 +8,6 @@
     <file url="file://$PROJECT_DIR$/migo-schedule" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/migo-shiro" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/migo-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/migo-web/src/main/webapp/js/generator/jquery-datetimepicker.js" charset="GBK" />
   </component>
 </project>
