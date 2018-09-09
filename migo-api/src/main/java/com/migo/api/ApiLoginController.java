@@ -248,7 +248,6 @@ public class ApiLoginController {
             ApiReturn.error();
         }
         OrderEntity orderEntity= orderService.queryObject(Long.valueOf(orderId));
-
         orderEntity.setBuyUser("");
         orderService.update(orderEntity);
         return   ApiReturn.ok();
@@ -330,6 +329,8 @@ public class ApiLoginController {
     public ApiReturn orderSubmit(String token,String orderId,String imageUrl,String buyerName,String buyerAccount ){
         Assert.isBlank(token, "token不能为空");
         Assert.isBlank(orderId, "orderId不能为空");
+        Assert.isBlank(buyerAccount, "buyerAccount不能为空");
+        Assert.isBlank(buyerName, "buyerName不能为空");
         OrderEntity orderEntity=  orderService.queryObject(Long.valueOf(orderId));
         orderEntity.setOrderStatus("SUB");
         orderEntity.setImageUrl(imageUrl);
@@ -392,7 +393,7 @@ public class ApiLoginController {
 
         Map<String, Object> map=new HashedMap();
         map.put("auditStatus",tokenEntity.getUserId());
-        map.put("taskType",taskType);
+        map.put("accountType",taskType);
         Query query = new Query(map);
         List<BuyerAccountEntity> buyerAccount= buyerAccountService.queryList(query);
         Map<String, Object> list=new HashedMap();

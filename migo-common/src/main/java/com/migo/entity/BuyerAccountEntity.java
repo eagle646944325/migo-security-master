@@ -10,7 +10,7 @@ import java.util.Date;
  * 
  * @author zhiqiu
  * @email fei6751803@163.com
- * @date 2018-08-15 22:14:37
+ * @date 2018-08-26 14:18:51
  */
 public class BuyerAccountEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -35,6 +35,8 @@ public class BuyerAccountEntity implements Serializable {
 	private Date createTime;
 	//备注
 	private String remark;
+	//账户类型
+	private String accountType;
 
 	/**
 	 * 设置：
@@ -155,5 +157,17 @@ public class BuyerAccountEntity implements Serializable {
 	 */
 	public String getRemark() {
 		return remark;
+	}
+	/**
+	 * 设置：账户类型
+	 */
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+	/**
+	 * 获取：账户类型
+	 */
+	public String getAccountType() {
+		return accountType;
 	}
 }
